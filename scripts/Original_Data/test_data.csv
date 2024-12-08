@@ -1,301 +1,145 @@
-gender,race/ethnicity,parental level of education,lunch,test preparation course,math score,reading score,writing score
-female,group C,associate's degree,standard,none,91,86,84
-female,group B,some college,free/reduced,completed,53,66,73
-male,group D,bachelor's degree,standard,none,80,73,72
-male,group C,some college,free/reduced,none,74,77,73
-male,group E,some college,standard,completed,84,83,78
-male,group D,associate's degree,free/reduced,none,81,75,78
-male,group B,associate's degree,free/reduced,completed,69,70,63
-female,group B,some high school,standard,completed,54,61,62
-male,group C,associate's degree,free/reduced,none,87,73,72
-male,group B,some high school,standard,completed,51,54,41
-male,group A,high school,free/reduced,none,45,47,49
-male,group E,some high school,standard,none,30,26,22
-female,group B,high school,free/reduced,completed,67,80,81
-female,group D,some college,free/reduced,none,49,65,61
-male,group D,some college,standard,completed,85,81,85
-female,group D,some high school,standard,completed,65,78,82
-male,group D,high school,standard,none,53,52,42
-male,group D,bachelor's degree,free/reduced,none,55,46,44
-female,group D,some high school,standard,none,48,58,54
-female,group D,associate's degree,free/reduced,none,56,65,63
-male,group C,master's degree,standard,none,79,72,69
-female,group C,bachelor's degree,free/reduced,completed,43,51,54
-female,group C,some college,free/reduced,completed,45,73,70
-female,group C,high school,free/reduced,none,36,53,43
-male,group D,some high school,free/reduced,completed,80,79,79
-male,group D,associate's degree,standard,none,80,75,77
-male,group D,bachelor's degree,standard,completed,68,74,74
-female,group C,associate's degree,standard,none,40,59,51
-female,group A,high school,free/reduced,completed,34,48,41
-female,group D,some college,free/reduced,none,49,58,60
-male,group B,some college,standard,none,62,61,57
-male,group D,some college,standard,completed,71,61,69
-male,group B,bachelor's degree,free/reduced,none,62,63,56
-male,group E,some college,standard,none,76,71,72
-male,group E,some college,standard,none,84,77,71
-female,group B,some college,free/reduced,none,45,53,55
-male,group D,associate's degree,free/reduced,none,77,78,73
-female,group D,some college,standard,none,69,77,77
-female,group C,master's degree,standard,none,73,78,74
-female,group C,some high school,free/reduced,none,0,17,10
-male,group C,associate's degree,standard,completed,82,75,77
-male,group B,some high school,standard,completed,65,66,62
-male,group D,bachelor's degree,standard,completed,67,61,68
-female,group A,some college,standard,none,54,63,67
-male,group D,associate's degree,free/reduced,none,90,87,75
-female,group E,high school,standard,completed,59,63,75
-male,group D,high school,free/reduced,none,74,70,69
-female,group C,high school,standard,none,29,29,30
-male,group D,some high school,standard,completed,89,88,82
-female,group A,high school,standard,completed,75,82,79
-male,group B,some college,standard,completed,71,75,70
-female,group D,associate's degree,standard,none,64,76,74
-male,group C,some college,standard,completed,79,79,78
-female,group B,some college,free/reduced,completed,48,56,58
-female,group C,some high school,standard,none,69,73,73
-female,group D,some college,standard,none,69,74,74
-male,group D,bachelor's degree,standard,none,88,78,83
-male,group C,associate's degree,standard,none,58,54,52
-male,group B,associate's degree,standard,none,87,85,73
-female,group A,some high school,standard,completed,85,90,92
-male,group A,some high school,standard,completed,46,41,43
-female,group C,some high school,free/reduced,completed,71,84,87
-female,group C,associate's degree,standard,none,81,77,79
-female,group B,some college,free/reduced,none,58,61,66
-male,group D,master's degree,free/reduced,completed,84,89,90
-female,group C,bachelor's degree,free/reduced,completed,66,74,81
-female,group D,some college,free/reduced,none,55,71,69
-male,group C,high school,free/reduced,none,59,53,52
-female,group D,some college,free/reduced,completed,58,63,73
-female,group D,associate's degree,standard,none,82,95,89
-male,group E,associate's degree,standard,completed,66,63,64
-female,group C,bachelor's degree,standard,none,81,88,90
-male,group C,some college,free/reduced,none,58,57,54
-female,group A,associate's degree,free/reduced,none,37,57,56
-male,group C,some high school,standard,completed,63,60,57
-male,group E,some high school,standard,completed,77,76,77
-female,group D,some college,standard,completed,85,86,98
-male,group B,associate's degree,free/reduced,none,57,56,57
-female,group A,some high school,standard,none,48,66,65
-male,group C,some high school,standard,none,51,52,44
-male,group D,some college,free/reduced,none,63,61,60
-male,group D,some high school,free/reduced,none,45,37,37
-male,group C,bachelor's degree,standard,none,83,78,73
-female,group C,some college,standard,none,60,72,74
-male,group B,bachelor's degree,standard,none,63,71,69
-female,group C,high school,free/reduced,none,62,67,64
-female,group D,some college,standard,completed,68,78,77
-female,group B,some high school,standard,completed,60,70,74
-female,group C,some high school,standard,completed,77,90,85
-male,group A,some college,free/reduced,none,28,23,19
-male,group C,master's degree,free/reduced,none,79,81,71
-female,group E,some college,standard,none,100,92,97
-male,group D,bachelor's degree,standard,none,69,58,57
-male,group B,high school,free/reduced,none,66,77,70
-female,group B,some college,standard,none,19,38,32
-male,group D,associate's degree,standard,none,75,68,64
-male,group D,some college,standard,none,60,63,59
-female,group A,some college,standard,none,58,70,67
-female,group C,associate's degree,standard,none,69,80,71
-female,group C,associate's degree,free/reduced,completed,56,68,70
-male,group C,associate's degree,standard,completed,73,78,72
-male,group E,some college,standard,none,66,57,52
-male,group A,associate's degree,standard,none,67,57,53
-female,group C,associate's degree,free/reduced,none,64,73,68
-male,group A,high school,standard,none,71,74,64
-male,group B,high school,standard,none,70,65,60
-male,group E,associate's degree,standard,none,53,45,40
-male,group C,high school,standard,none,75,81,71
-female,group B,high school,standard,completed,68,83,78
-female,group C,high school,standard,none,44,61,52
-female,group D,bachelor's degree,free/reduced,none,29,41,47
-female,group B,high school,free/reduced,none,71,87,82
-male,group A,high school,standard,none,57,51,54
-female,group A,bachelor's degree,standard,none,45,59,64
-female,group C,some college,free/reduced,none,76,83,88
-male,group C,high school,standard,none,61,56,55
-male,group C,some high school,free/reduced,completed,45,52,49
-male,group D,high school,standard,completed,55,41,48
-male,group B,high school,standard,completed,73,69,68
-male,group D,high school,free/reduced,completed,78,77,80
-female,group A,master's degree,free/reduced,none,50,67,73
-female,group C,some college,free/reduced,none,62,67,62
-male,group D,master's degree,standard,none,81,81,84
-female,group C,some high school,free/reduced,completed,64,79,77
-female,group D,some high school,standard,completed,64,60,74
-male,group D,some high school,standard,none,73,66,62
-female,group D,associate's degree,standard,completed,73,75,80
-female,group C,some high school,standard,completed,67,74,77
-male,group B,associate's degree,standard,none,61,42,41
-male,group C,some high school,standard,completed,67,73,68
-female,group D,some high school,standard,none,65,82,81
-male,group D,associate's degree,standard,none,80,75,69
-male,group D,some high school,free/reduced,none,59,42,41
-female,group E,master's degree,standard,completed,88,99,95
-female,group C,associate's degree,standard,none,62,74,70
-female,group C,high school,free/reduced,none,33,41,43
-female,group C,bachelor's degree,standard,completed,79,92,89
-male,group B,some high school,standard,completed,84,83,75
-male,group A,master's degree,free/reduced,none,73,74,72
-female,group A,associate's degree,free/reduced,none,41,51,48
-female,group E,associate's degree,free/reduced,none,50,56,54
-female,group B,high school,standard,completed,58,70,68
-male,group D,some high school,free/reduced,completed,55,59,59
-male,group D,high school,standard,none,45,48,46
-male,group D,some high school,standard,completed,88,74,75
-female,group B,associate's degree,free/reduced,none,46,61,55
-male,group A,some high school,standard,none,51,31,36
-male,group D,some high school,standard,none,75,74,69
-male,group E,some college,free/reduced,completed,49,52,51
-female,group E,high school,standard,none,75,86,79
-female,group E,high school,standard,completed,74,79,80
-female,group B,associate's degree,standard,completed,61,86,87
-male,group C,associate's degree,standard,none,62,65,58
-male,group C,some high school,free/reduced,none,68,63,54
-female,group D,master's degree,standard,none,78,91,96
-female,group E,some college,standard,none,71,70,76
-female,group D,high school,free/reduced,none,49,57,52
-female,group A,bachelor's degree,standard,none,59,72,70
-male,group E,bachelor's degree,free/reduced,completed,79,74,72
-female,group E,associate's degree,standard,none,51,51,54
-female,group C,bachelor's degree,standard,completed,56,79,72
-male,group B,high school,standard,completed,76,62,60
-female,group D,some college,standard,completed,69,79,81
-male,group C,some high school,free/reduced,completed,51,56,53
-male,group D,some college,standard,completed,82,82,88
-male,group C,some college,standard,none,73,74,61
-male,group C,high school,free/reduced,completed,40,46,50
-male,group E,some college,free/reduced,none,93,90,83
-female,group C,bachelor's degree,standard,completed,59,64,75
-female,group B,associate's degree,standard,none,73,76,80
-male,group B,some high school,standard,completed,85,84,78
-male,group E,associate's degree,standard,none,76,71,67
-female,group D,associate's degree,free/reduced,completed,77,89,98
-female,group D,some college,free/reduced,completed,67,86,83
-male,group D,some college,free/reduced,none,61,47,56
-female,group D,some high school,free/reduced,none,27,34,32
-male,group D,high school,standard,none,54,52,52
-female,group C,master's degree,free/reduced,completed,65,81,81
-female,group E,associate's degree,standard,none,87,94,95
-female,group C,some high school,standard,completed,70,82,76
-female,group B,high school,standard,none,54,64,68
-female,group C,high school,free/reduced,none,66,76,68
-female,group D,master's degree,free/reduced,completed,85,95,100
-male,group C,some high school,free/reduced,completed,56,61,60
-male,group E,master's degree,standard,none,90,85,84
-male,group E,high school,standard,none,70,55,56
-female,group B,bachelor's degree,standard,none,61,72,70
-male,group A,bachelor's degree,free/reduced,completed,49,58,60
-male,group C,high school,standard,none,81,66,64
-male,group B,some college,standard,completed,87,84,86
-male,group B,some high school,free/reduced,completed,49,50,52
-male,group B,some high school,standard,none,68,54,53
-male,group C,associate's degree,free/reduced,none,77,67,64
-female,group B,bachelor's degree,free/reduced,none,78,79,76
-male,group C,associate's degree,free/reduced,completed,60,51,56
-female,group D,high school,free/reduced,completed,52,57,56
-male,group E,associate's degree,standard,completed,62,56,53
-female,group B,some college,free/reduced,none,74,81,76
-female,group C,associate's degree,standard,none,65,77,74
-female,group D,some high school,standard,completed,61,74,72
-female,group D,master's degree,standard,none,62,70,75
-female,group C,bachelor's degree,free/reduced,completed,66,83,83
-female,group D,some college,free/reduced,none,79,89,86
-male,group C,master's degree,free/reduced,none,61,67,66
-male,group E,high school,standard,none,73,64,57
-male,group B,high school,free/reduced,none,30,24,15
-female,group C,bachelor's degree,standard,completed,96,100,100
-female,group C,associate's degree,standard,completed,57,77,80
-male,group D,high school,standard,completed,68,64,66
-female,group C,some high school,free/reduced,none,48,58,52
-male,group B,some high school,standard,none,67,64,61
-female,group C,some college,free/reduced,none,59,62,64
-male,group E,some high school,standard,completed,74,64,60
-female,group C,some high school,standard,none,65,69,76
-female,group B,some college,standard,none,62,67,67
-male,group C,associate's degree,standard,none,47,37,35
-male,group D,associate's degree,standard,none,80,63,63
-male,group C,high school,standard,none,68,60,53
-female,group D,some college,standard,completed,79,84,91
-male,group D,high school,standard,none,89,87,79
-male,group A,some college,standard,none,69,67,69
-female,group E,some college,free/reduced,none,53,58,57
-female,group C,some college,standard,completed,64,82,77
-male,group C,high school,standard,completed,82,84,82
-male,group B,high school,free/reduced,none,36,29,27
-female,group B,master's degree,standard,none,90,95,93
-female,group D,master's degree,standard,none,64,63,66
-female,group B,bachelor's degree,standard,none,52,65,69
-female,group D,some high school,free/reduced,none,67,84,84
-male,group C,associate's degree,standard,completed,51,60,58
-male,group D,some college,standard,none,79,73,67
-male,group A,high school,standard,none,63,63,62
-female,group D,associate's degree,free/reduced,none,52,59,56
-male,group A,associate's degree,free/reduced,completed,40,55,53
-male,group D,some college,standard,none,40,42,38
-female,group B,some college,standard,none,63,65,61
-male,group C,associate's degree,standard,none,46,43,42
-female,group C,some high school,free/reduced,completed,65,76,75
-female,group B,some high school,standard,none,62,64,66
-male,group B,associate's degree,standard,none,90,78,81
-male,group A,associate's degree,free/reduced,none,47,57,44
-male,group C,some college,standard,none,59,41,42
-female,group B,master's degree,free/reduced,completed,77,97,94
-female,group C,associate's degree,standard,none,52,55,57
-male,group E,some college,standard,completed,99,87,81
-female,group B,some high school,standard,none,70,64,72
-male,group C,associate's degree,free/reduced,none,64,66,59
-male,group A,bachelor's degree,standard,completed,80,78,81
-male,group D,high school,free/reduced,none,42,39,34
-male,group E,associate's degree,standard,completed,97,82,88
-male,group A,some college,free/reduced,completed,50,47,54
-female,group B,some high school,standard,completed,65,82,78
-female,group C,master's degree,free/reduced,none,52,65,61
-female,group E,associate's degree,standard,none,59,62,69
-male,group B,some high school,standard,none,74,63,57
-female,group C,some high school,free/reduced,none,43,53,53
-female,group B,high school,free/reduced,completed,67,78,79
-male,group E,bachelor's degree,standard,completed,100,100,100
-male,group D,high school,standard,none,72,66,66
-female,group B,associate's degree,standard,none,71,83,78
-male,group A,some high school,free/reduced,none,55,46,43
-female,group C,some college,standard,none,84,87,91
-female,group E,some college,standard,completed,63,72,70
-female,group C,bachelor's degree,standard,none,63,75,81
-female,group C,some college,free/reduced,completed,42,66,69
-male,group E,associate's degree,free/reduced,completed,78,74,72
-male,group E,some college,standard,none,69,60,54
-female,group B,associate's degree,standard,none,80,86,83
-male,group B,high school,standard,none,79,60,65
-male,group C,associate's degree,standard,completed,87,100,95
-female,group A,associate's degree,free/reduced,none,65,85,76
-female,group D,some high school,standard,none,51,63,61
-male,group D,master's degree,standard,none,85,84,89
-male,group A,some high school,standard,completed,47,49,49
-male,group C,master's degree,free/reduced,none,54,59,50
-female,group B,high school,free/reduced,none,38,60,50
-male,group C,some high school,free/reduced,completed,59,69,65
-male,group D,high school,free/reduced,none,60,57,51
-male,group B,high school,free/reduced,none,49,45,45
-female,group C,associate's degree,standard,completed,52,59,62
-female,group C,bachelor's degree,free/reduced,none,44,63,62
-female,group E,associate's degree,free/reduced,none,70,84,81
-male,group C,associate's degree,standard,none,84,80,80
-male,group C,associate's degree,standard,none,76,70,68
-male,group C,some college,free/reduced,none,35,28,27
-female,group C,associate's degree,standard,completed,96,96,99
-female,group D,some college,standard,none,80,90,89
-male,group B,associate's degree,standard,none,81,73,72
-male,group D,high school,standard,none,57,50,54
-male,group E,high school,standard,none,94,73,71
-male,group B,high school,standard,none,82,82,80
-male,group D,high school,standard,none,70,70,70
-female,group B,associate's degree,standard,completed,94,87,92
-male,group A,bachelor's degree,standard,completed,75,58,62
-female,group C,some college,standard,none,52,58,58
-female,group A,high school,free/reduced,completed,77,88,85
-male,group D,some college,free/reduced,none,70,63,58
-male,group A,some high school,free/reduced,none,65,59,53
-male,group B,some college,free/reduced,none,40,43,39
-female,group C,some college,standard,completed,70,89,88
+gender,NationalITy,PlaceofBirth,StageID,GradeID,SectionID,Topic,Semester,Relation,raisedhands,VisITedResources,AnnouncementsView,Discussion,ParentAnsweringSurvey,ParentschoolSatisfaction,StudentAbsenceDays,Class
+F,KW,KuwaIT,MiddleSchool,G-07,A,English,F,Father,19,30,26,19,Yes,Bad,Above-7,M
+F,Lybia,Lybia,MiddleSchool,G-07,B,Biology,F,Mum,10,9,2,1,No,Good,Above-7,L
+M,Jordan,Palestine,MiddleSchool,G-07,A,Biology,F,Mum,78,91,50,40,Yes,Good,Under-7,H
+M,Palestine,Jordan,MiddleSchool,G-06,A,English,S,Mum,92,31,42,27,Yes,Good,Under-7,H
+M,Palestine,Palestine,MiddleSchool,G-07,A,Biology,S,Father,89,92,89,83,Yes,Good,Under-7,H
+M,Iran,Iran,lowerlevel,G-02,B,French,S,Mum,20,22,53,13,No,Good,Above-7,L
+M,Jordan,Jordan,MiddleSchool,G-06,A,English,F,Father,10,8,10,10,Yes,Bad,Above-7,M
+M,Jordan,Jordan,lowerlevel,G-02,B,Arabic,S,Father,35,2,29,23,No,Bad,Above-7,L
+M,KW,KuwaIT,HighSchool,G-09,A,IT,F,Father,20,80,33,33,Yes,Good,Under-7,M
+M,Jordan,Jordan,MiddleSchool,G-08,A,History,F,Mum,69,77,76,75,Yes,Good,Above-7,M
+F,KW,KuwaIT,MiddleSchool,G-07,B,IT,F,Father,70,80,25,70,Yes,Good,Under-7,M
+M,Iraq,Iraq,MiddleSchool,G-06,A,English,S,Mum,74,60,56,37,No,Good,Under-7,H
+M,Jordan,SaudiArabia,MiddleSchool,G-08,A,Geology,S,Father,87,79,73,98,No,Bad,Under-7,M
+M,Jordan,Jordan,lowerlevel,G-04,A,Science,F,Father,18,17,26,34,No,Good,Above-7,M
+F,KW,KuwaIT,MiddleSchool,G-08,A,Arabic,F,Father,35,80,50,70,Yes,Good,Under-7,H
+M,USA,USA,lowerlevel,G-02,B,IT,F,Father,55,89,40,40,Yes,Good,Under-7,H
+M,KW,KuwaIT,MiddleSchool,G-07,A,Math,F,Father,16,14,6,20,Yes,Good,Above-7,L
+F,Jordan,Jordan,MiddleSchool,G-08,A,Geology,S,Mum,74,62,49,43,Yes,Good,Above-7,M
+M,KW,KuwaIT,lowerlevel,G-05,A,English,F,Father,8,22,9,40,No,Bad,Above-7,L
+F,KW,KuwaIT,MiddleSchool,G-08,B,Arabic,S,Father,22,51,42,40,Yes,Bad,Under-7,M
+F,SaudiArabia,SaudiArabia,lowerlevel,G-02,B,French,S,Father,60,70,63,93,Yes,Bad,Under-7,H
+F,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,S,Mum,89,96,45,92,Yes,Good,Under-7,H
+M,Jordan,Jordan,MiddleSchool,G-07,A,IT,F,Father,22,30,10,12,Yes,Good,Above-7,L
+M,KW,KuwaIT,lowerlevel,G-04,A,History,S,Father,61,97,82,64,Yes,Bad,Above-7,M
+M,KW,KuwaIT,lowerlevel,G-02,B,IT,F,Father,0,12,3,3,Yes,Good,Above-7,M
+F,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,F,Father,2,7,4,8,No,Bad,Above-7,L
+F,lebanon,lebanon,lowerlevel,G-02,B,French,F,Mum,72,98,52,15,Yes,Good,Under-7,H
+F,Jordan,Jordan,lowerlevel,G-02,A,French,S,Mum,50,80,20,15,Yes,Good,Above-7,M
+M,Jordan,Jordan,lowerlevel,G-04,A,Science,S,Father,22,34,15,9,No,Bad,Above-7,L
+M,KW,KuwaIT,lowerlevel,G-04,A,IT,F,Father,15,16,2,20,Yes,Good,Under-7,M
+F,Jordan,Jordan,MiddleSchool,G-07,A,Biology,S,Mum,90,88,54,12,Yes,Good,Above-7,M
+M,KW,KuwaIT,MiddleSchool,G-07,B,Math,F,Father,19,6,19,12,Yes,Good,Under-7,M
+F,Jordan,Jordan,lowerlevel,G-02,B,Arabic,F,Father,11,20,20,98,No,Bad,Above-7,L
+M,Jordan,SaudiArabia,MiddleSchool,G-08,A,Geology,F,Father,85,89,22,61,No,Bad,Under-7,H
+M,Jordan,Jordan,lowerlevel,G-02,B,Arabic,S,Mum,32,82,59,63,Yes,Bad,Above-7,M
+F,KW,KuwaIT,lowerlevel,G-02,C,IT,F,Mum,25,29,40,17,No,Good,Under-7,H
+F,Jordan,Jordan,lowerlevel,G-04,B,Science,F,Mum,11,20,21,23,No,Bad,Under-7,M
+M,Syria,Syria,lowerlevel,G-02,B,French,S,Mum,20,52,23,33,Yes,Good,Above-7,L
+M,Palestine,Jordan,MiddleSchool,G-08,A,History,S,Father,78,82,78,53,Yes,Good,Under-7,M
+F,KW,KuwaIT,MiddleSchool,G-07,A,IT,F,Mum,69,15,36,96,Yes,Good,Under-7,M
+F,Jordan,Jordan,lowerlevel,G-02,A,French,F,Mum,10,90,30,21,No,Good,Under-7,M
+M,lebanon,Jordan,MiddleSchool,G-08,A,Arabic,S,Mum,87,65,82,33,Yes,Good,Under-7,H
+M,KW,KuwaIT,lowerlevel,G-02,B,IT,F,Father,4,8,10,60,Yes,Good,Above-7,L
+M,lebanon,lebanon,MiddleSchool,G-08,C,Spanish,S,Father,77,69,41,13,Yes,Good,Under-7,M
+F,SaudiArabia,SaudiArabia,MiddleSchool,G-07,B,Science,F,Father,50,90,37,70,Yes,Good,Under-7,M
+M,Jordan,Jordan,lowerlevel,G-02,A,French,S,Father,30,10,20,5,No,Bad,Above-7,L
+M,Iraq,Iraq,MiddleSchool,G-08,A,Chemistry,S,Father,80,90,80,83,Yes,Good,Under-7,H
+M,Iran,Iran,HighSchool,G-09,A,IT,F,Mum,15,70,37,44,Yes,Good,Under-7,M
+M,SaudiArabia,USA,HighSchool,G-11,B,Math,S,Father,70,58,73,91,Yes,Bad,Under-7,H
+M,KW,KuwaIT,HighSchool,G-10,A,IT,F,Father,17,13,16,12,Yes,Bad,Under-7,M
+F,Jordan,Jordan,MiddleSchool,G-07,A,Biology,F,Mum,88,81,50,10,Yes,Good,Above-7,M
+F,Iraq,Iraq,lowerlevel,G-02,B,French,F,Father,16,90,15,11,No,Good,Under-7,M
+F,Lybia,Lybia,MiddleSchool,G-07,B,Biology,S,Mum,9,7,9,3,No,Good,Above-7,L
+M,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,F,Mum,85,87,72,10,Yes,Good,Above-7,M
+F,Jordan,Jordan,lowerlevel,G-04,B,Science,S,Father,32,44,29,89,Yes,Bad,Under-7,M
+M,Jordan,Jordan,MiddleSchool,G-06,A,English,F,Father,19,80,12,17,Yes,Good,Above-7,M
+M,KW,KuwaIT,lowerlevel,G-02,B,IT,F,Father,7,5,2,80,Yes,Good,Above-7,L
+F,KW,KuwaIT,lowerlevel,G-02,B,IT,F,Mum,70,92,50,7,Yes,Good,Under-7,H
+F,Jordan,Jordan,MiddleSchool,G-08,A,Geology,S,Father,55,74,25,29,No,Bad,Under-7,M
+M,KW,KuwaIT,lowerlevel,G-02,B,IT,F,Father,25,27,0,69,No,Bad,Above-7,L
+M,Iraq,Iraq,MiddleSchool,G-08,A,History,S,Father,69,77,83,92,Yes,Good,Above-7,M
+M,KW,KuwaIT,lowerlevel,G-04,A,Arabic,S,Father,39,26,12,44,No,Bad,Above-7,L
+M,KW,KuwaIT,HighSchool,G-11,A,Quran,F,Father,13,3,11,9,No,Bad,Above-7,L
+F,KW,USA,HighSchool,G-11,A,Quran,F,Mum,60,80,50,40,No,Bad,Under-7,M
+M,KW,KuwaIT,MiddleSchool,G-07,B,Science,S,Mum,32,60,58,66,Yes,Good,Above-7,M
+F,Jordan,Jordan,lowerlevel,G-04,B,Science,F,Father,15,50,24,43,Yes,Bad,Under-7,M
+M,Jordan,Jordan,lowerlevel,G-02,A,French,F,Father,10,15,10,21,No,Bad,Above-7,L
+F,USA,USA,HighSchool,G-12,A,IT,F,Mum,70,69,35,30,Yes,Good,Under-7,H
+M,KW,KuwaIT,MiddleSchool,G-07,A,Math,F,Father,11,2,2,8,No,Bad,Under-7,L
+M,KW,KuwaIT,MiddleSchool,G-08,C,Spanish,S,Mum,96,61,42,94,Yes,Bad,Under-7,H
+M,Jordan,Jordan,lowerlevel,G-04,B,Science,F,Father,25,29,34,33,No,Good,Above-7,M
+F,lebanon,lebanon,MiddleSchool,G-07,B,Math,F,Mum,80,90,49,55,Yes,Bad,Under-7,H
+M,Tunis,Tunis,MiddleSchool,G-08,C,Spanish,S,Mum,27,41,49,14,No,Bad,Under-7,M
+F,Jordan,Jordan,MiddleSchool,G-07,A,Quran,S,Father,60,55,30,40,No,Bad,Under-7,M
+M,SaudiArabia,USA,HighSchool,G-11,B,English,S,Father,70,50,33,41,No,Bad,Above-7,M
+M,Iran,Iran,lowerlevel,G-02,B,French,S,Father,10,2,13,53,No,Bad,Above-7,L
+M,KW,KuwaIT,lowerlevel,G-04,A,IT,S,Father,65,86,62,40,No,Good,Above-7,M
+F,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,S,Father,5,4,5,8,No,Bad,Above-7,L
+M,Lybia,Lybia,lowerlevel,G-02,A,French,F,Mum,10,8,9,3,No,Good,Above-7,L
+M,Jordan,Jordan,MiddleSchool,G-07,A,Quran,F,Mum,50,90,29,60,Yes,Good,Under-7,M
+F,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,S,Mum,84,92,29,43,Yes,Good,Under-7,H
+F,KW,KuwaIT,MiddleSchool,G-06,A,IT,F,Father,30,40,22,66,Yes,Good,Under-7,M
+M,SaudiArabia,USA,HighSchool,G-11,B,Spanish,S,Father,10,51,40,40,No,Bad,Above-7,L
+F,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,F,Mum,85,99,42,90,Yes,Good,Under-7,H
+M,KW,KuwaIT,MiddleSchool,G-07,B,IT,F,Mum,70,50,40,99,Yes,Good,Under-7,H
+M,Jordan,Jordan,lowerlevel,G-04,B,Science,S,Father,42,34,29,39,No,Good,Above-7,M
+F,Jordan,Jordan,lowerlevel,G-02,A,French,F,Mum,60,87,23,11,Yes,Good,Above-7,M
+M,USA,USA,MiddleSchool,G-08,B,Math,F,Father,19,5,4,1,Yes,Good,Above-7,L
+M,Lybia,Lybia,lowerlevel,G-02,B,French,S,Mum,15,4,12,7,No,Good,Above-7,L
+M,KW,KuwaIT,MiddleSchool,G-08,C,Spanish,S,Father,17,61,42,14,No,Bad,Under-7,M
+M,Jordan,SaudiArabia,MiddleSchool,G-08,A,Geology,F,Father,95,87,62,81,No,Bad,Under-7,M
+M,KW,KuwaIT,MiddleSchool,G-08,B,Spanish,S,Father,62,61,82,40,Yes,Bad,Under-7,M
+M,KW,KuwaIT,MiddleSchool,G-07,B,Science,S,Father,72,80,58,66,Yes,Good,Above-7,M
+M,Jordan,Jordan,MiddleSchool,G-07,B,Biology,F,Father,50,79,10,31,No,Bad,Under-7,M
+M,KW,KuwaIT,MiddleSchool,G-07,A,IT,F,Father,8,7,30,40,Yes,Good,Above-7,L
+M,Palestine,Jordan,MiddleSchool,G-07,B,Biology,S,Father,99,96,89,84,Yes,Good,Under-7,H
+M,KW,KuwaIT,lowerlevel,G-02,C,IT,S,Father,0,3,10,3,No,Bad,Above-7,L
+M,KW,KuwaIT,HighSchool,G-11,B,Math,S,Mum,73,84,77,81,Yes,Good,Above-7,H
+M,Palestine,Palestine,MiddleSchool,G-08,A,Geology,S,Father,85,88,79,70,Yes,Good,Under-7,M
+M,KW,KuwaIT,HighSchool,G-09,A,IT,F,Father,10,12,7,33,Yes,Good,Above-7,L
+M,Jordan,Jordan,lowerlevel,G-02,A,Arabic,F,Father,20,88,31,28,Yes,Good,Above-7,M
+M,Jordan,Jordan,MiddleSchool,G-07,A,Biology,F,Mum,2,9,10,1,No,Bad,Above-7,L
+M,Tunis,Tunis,MiddleSchool,G-07,A,Quran,F,Father,10,60,5,20,Yes,Bad,Above-7,L
+F,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,S,Father,79,91,49,22,Yes,Good,Under-7,H
+M,KW,KuwaIT,MiddleSchool,G-08,C,Spanish,S,Father,70,81,39,84,No,Bad,Under-7,M
+M,KW,KuwaIT,MiddleSchool,G-08,A,Arabic,S,Mum,95,91,62,53,Yes,Good,Under-7,M
+M,Jordan,Jordan,MiddleSchool,G-08,A,History,F,Mum,87,92,74,89,Yes,Good,Under-7,H
+M,KW,KuwaIT,MiddleSchool,G-07,A,IT,F,Father,15,21,2,90,No,Bad,Under-7,M
+F,Jordan,Jordan,MiddleSchool,G-08,A,Geology,F,Mum,70,69,46,45,Yes,Good,Above-7,M
+M,KW,KuwaIT,lowerlevel,G-05,A,English,F,Father,7,10,1,30,No,Bad,Above-7,L
+F,Iran,Iran,lowerlevel,G-02,C,IT,F,Father,2,9,7,55,Yes,Good,Under-7,M
+M,Jordan,Jordan,MiddleSchool,G-07,A,Biology,F,Father,39,71,40,26,No,Good,Above-7,M
+M,Jordan,Jordan,lowerlevel,G-02,C,IT,F,Father,80,42,20,50,Yes,Good,Under-7,M
+F,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,F,Mum,82,89,22,31,Yes,Good,Under-7,H
+M,Palestine,Jordan,MiddleSchool,G-08,A,History,F,Father,81,86,86,41,Yes,Good,Under-7,M
+M,KW,KuwaIT,MiddleSchool,G-07,A,Math,F,Father,5,2,6,5,Yes,Good,Above-7,L
+M,Tunis,Tunis,lowerlevel,G-02,B,French,S,Mum,60,52,23,33,Yes,Bad,Under-7,H
+F,Jordan,Jordan,lowerlevel,G-04,A,Science,F,Father,49,36,32,44,No,Bad,Above-7,L
+M,Jordan,Jordan,MiddleSchool,G-07,A,Biology,F,Father,76,81,80,86,No,Good,Under-7,H
+M,KW,KuwaIT,MiddleSchool,G-07,B,IT,F,Father,0,2,3,70,Yes,Good,Above-7,L
+M,KW,KuwaIT,MiddleSchool,G-07,A,Math,F,Father,55,13,35,90,No,Bad,Above-7,M
+F,KW,KuwaIT,HighSchool,G-12,A,English,F,Father,25,10,19,30,No,Bad,Above-7,M
+M,Jordan,Jordan,MiddleSchool,G-07,A,Biology,F,Father,80,80,46,61,Yes,Bad,Under-7,M
+M,SaudiArabia,SaudiArabia,lowerlevel,G-02,B,IT,F,Father,70,12,40,50,Yes,Good,Under-7,H
+M,KW,KuwaIT,MiddleSchool,G-07,A,IT,F,Father,4,5,40,16,Yes,Good,Above-7,L
+M,KW,KuwaIT,lowerlevel,G-02,B,IT,F,Father,50,70,50,10,Yes,Good,Above-7,H
+M,KW,KuwaIT,lowerlevel,G-02,C,IT,F,Father,0,6,4,15,Yes,Bad,Under-7,L
+M,Jordan,Jordan,lowerlevel,G-02,A,French,S,Father,35,2,29,33,No,Good,Above-7,L
+F,Jordan,Jordan,MiddleSchool,G-08,A,Geology,F,Father,25,82,52,20,Yes,Good,Above-7,M
+F,Jordan,Jordan,MiddleSchool,G-08,A,History,F,Father,45,87,57,80,Yes,Good,Under-7,M
+F,KW,KuwaIT,lowerlevel,G-02,B,IT,F,Father,80,44,35,10,No,Good,Above-7,L
+M,Lybia,Lybia,lowerlevel,G-02,A,French,S,Mum,15,7,12,7,No,Good,Above-7,L
+M,Jordan,Jordan,lowerlevel,G-02,B,French,S,Father,50,62,13,33,No,Bad,Above-7,L
+M,KW,KuwaIT,MiddleSchool,G-07,A,IT,F,Father,2,0,2,50,No,Bad,Above-7,L
+M,Jordan,Jordan,MiddleSchool,G-08,B,Arabic,S,Father,29,10,12,24,No,Bad,Above-7,L
+F,KW,KuwaIT,MiddleSchool,G-06,A,Quran,S,Father,70,40,2,16,No,Bad,Above-7,L
+M,Jordan,Jordan,MiddleSchool,G-07,A,Biology,S,Father,35,80,34,22,No,Good,Above-7,M
+F,KW,KuwaIT,lowerlevel,G-04,A,IT,F,Father,42,30,13,70,Yes,Bad,Above-7,M
+F,KW,KuwaIT,lowerlevel,G-02,C,IT,F,Mum,77,80,12,19,Yes,Good,Above-7,M
+M,KW,KuwaIT,MiddleSchool,G-07,A,Quran,F,Father,20,12,15,70,No,Good,Above-7,L
+M,KW,KuwaIT,MiddleSchool,G-07,B,IT,F,Father,36,30,20,80,No,Bad,Above-7,M
+F,Jordan,Jordan,MiddleSchool,G-08,A,Chemistry,S,Father,19,98,20,2,Yes,Good,Under-7,H
+M,Jordan,Jordan,lowerlevel,G-02,A,Arabic,S,Father,35,2,29,23,No,Bad,Under-7,M
+M,KW,KuwaIT,lowerlevel,G-04,A,IT,F,Father,30,25,5,35,No,Bad,Above-7,L

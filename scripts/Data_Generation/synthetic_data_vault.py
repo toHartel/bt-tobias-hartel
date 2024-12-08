@@ -30,13 +30,8 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     copula_gan.fit(data)
     fit_time = time.time() - start_time
     print(f"Time taken to fit copula_gan: {fit_time:.2f} seconds\n")
-
-    start_time = time.time()
-    print("Sampling from copula_gan...\n")
     copula_gan_samples = copula_gan.sample(num_samples)
     copula_gan_samples.to_csv('Synthetic_Data/copula_gan_samples.csv', sep = ",", index = False)
-    sample_time = time.time() - start_time
-    print(f"Time taken to sample from copula_gan: {sample_time:.2f} seconds\n")
 
 
     # Fit und Sample für ctgan
@@ -45,13 +40,8 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     ctgan.fit(data)
     fit_time = time.time() - start_time
     print(f"Time taken to fit ctgan: {fit_time:.2f} seconds\n")
-
-    start_time = time.time()
-    print("Sampling from ctgan...\n")
     ctgan_samples = ctgan.sample(num_samples)
     ctgan_samples.to_csv('Synthetic_Data/ctgan_samples.csv', sep = ",", index = False)
-    sample_time = time.time() - start_time
-    print(f"Time taken to sample from ctgan: {sample_time:.2f} seconds\n")
 
 
     # Fit und Sample für tvae
@@ -60,13 +50,8 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     tvae.fit(data)
     fit_time = time.time() - start_time
     print(f"Time taken to fit tvae: {fit_time:.2f} seconds\n")
-
-    start_time = time.time()
-    print("Sampling from tvae...\n")
     tvae_samples = tvae.sample(num_samples)
     tvae_samples.to_csv('Synthetic_Data/tvae_samples.csv', sep = ",", index = False)
-    sample_time = time.time() - start_time
-    print(f"Time taken to sample from tvae: {sample_time:.2f} seconds\n")
 
 
     # Fit und Sample für gaussian_copula
@@ -75,10 +60,5 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     gaussian_copula.fit(data)
     fit_time = time.time() - start_time
     print(f"Time taken to fit gaussian_copula: {fit_time:.2f} seconds\n")
-
-    start_time = time.time()
-    print("Sampling from gaussian_copula...\n")
     gaussian_samples = gaussian_copula.sample(num_samples)
     gaussian_samples.to_csv('Synthetic_Data/gaussian_samples.csv', sep = ",", index = False)
-    sample_time = time.time() - start_time
-    print(f"Time taken to sample from gaussian_copula: {sample_time:.2f} seconds\n")
