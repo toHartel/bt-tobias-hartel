@@ -1,11 +1,16 @@
 # Bachelor thesis project of Tobias Hartel
 
 Topic: Synthetic Data Generation for Learning Analytics
-Supervisor: Jakub Kuzilek
-Reviewer 1:
-Reviewer 2:
+
+- Supervisor: Dr. Jakub Kuzilek
+- Reviewer 1: Prof. Dr. Niels Pinkwart
+- Reviewer 2: Prof. Dr. Gergana Vladova
 
 [Proposal](https://www.overleaf.com/project/66ba05a898223c08af9bee3f)
+
+## Code
+
+For SDG and evaluation examples see notebooks (_dataset_i.ipynb_) in [scripts](scripts) folder.
 
 ## Resources
 
