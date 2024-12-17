@@ -22,8 +22,7 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     ctgan = CTGANSynthesizer(metadata)
     tvae = TVAESynthesizer(metadata)
     gaussian_copula = GaussianCopulaSynthesizer(metadata)
-
-
+    
     # Fit und Sample für copula_gan
     start_time = time.time()
     print("Fitting copula_gan...\n")

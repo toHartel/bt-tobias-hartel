@@ -1,4 +1,4 @@
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score, classification_report, roc_auc_score
@@ -7,16 +7,16 @@ import pandas as pd
 
     
 
-def run_utility_eval(data_train, data_test, synth_data, target_column, utility_function):
+def run_utility_eval(df_original_train, df_original_test, df_synthetic, target_column, utility_function):
     """ Run selected utility model on the original and synthetic data and calculate the difference in accuracy and F1 score.
-    
+
     Parameters
     ----------
-    data_train : str
+    data_train : pandas.DataFrame
         Path to training data
-    data_test : str
+    data_test : pandas.DataFrame
         Path to test data
-    synth_data : str
+    synth_data : pandas.DataFrame
         Path to synthetic data
     target_column : str
         Target variable used for prediction
@@ -25,44 +25,39 @@ def run_utility_eval(data_train, data_test, synth_data, target_column, utility_f
 
     Returns
     -------
-    float, float :
-        Returns the absolute difference in accuracy and F1 score between the original and synthetic data.
+    dict :
+        Returns a dict with the following keys: "acc_original", "f1_original", "acc_synth", "f1_synth", "acc_diff", "f1_diff"
     """
     model = ""
     if utility_function == "random_forest":
         model = RandomForestClassifier(random_state=42)
     elif utility_function == "logistic_regression":
-        model = LogisticRegression(random_state=42)
+        model = LogisticRegression(random_state=42, max_iter=1000, verbose=0)
     elif utility_function == "multilayer_perceptron":
         model = MLPClassifier(random_state=42)
     else:
         raise ValueError("Utility function not supported.")
 
-    df_original_train = pd.read_csv(data_train)
-    df_original_test = pd.read_csv(data_test)
-    df_synthetic = pd.read_csv(synth_data)
-
     # If the dataset contains categorical columns, convert them to one-hot encoding
-    if df_original_train.select_dtypes(include=['object']).shape[1] > 0:
-        # Combine all DataFrames to ensure the same columns
-        combined_df = pd.concat([df_original_train, df_original_test, df_synthetic], axis=0)
-        combined_df = pd.get_dummies(combined_df)
+    # if df_original_train.select_dtypes(include=['object']).shape[1] > 0:
+    #     # Combine all DataFrames to ensure the same columns
+    #     combined_df = pd.concat([df_original_train, df_original_test, df_synthetic], axis=0)
+    #     combined_df = pd.get_dummies(combined_df)
 
-        # Split the DataFrames again
-        df_original_train = combined_df.iloc[:len(df_original_train), :]
-        df_original_test = combined_df.iloc[len(df_original_train):len(df_original_train) + len(df_original_test), :]
-        df_synthetic = combined_df.iloc[len(df_original_train) + len(df_original_test):, :]
+    #     # Split the DataFrames again
+    #     df_original_train = combined_df.iloc[:len(df_original_train), :]
+    #     df_original_test = combined_df.iloc[len(df_original_train):len(df_original_train) + len(df_original_test), :]
+    #     df_synthetic = combined_df.iloc[len(df_original_train) + len(df_original_test):, :]
 
     # Reindex the test data to match the training data
     #df_original_test = df_original_test.reindex(columns=df_original_train.columns, fill_value=0)
+    result = {}
+    result["acc_original"], result["f1_original"] = fit_model(df_original_train, df_original_test, target_column, model)
+    result["acc_synth"], result["f1_synth"] = fit_model(df_synthetic, df_original_test, target_column, model)
+    result["acc_diff"] = result["acc_original"] - result["acc_synth"]
+    result["f1_diff"] = result["f1_original"] - result["f1_synth"]
 
-    accuracy_original, f1_score_original = fit_model(df_original_train, df_original_test, target_column, model)
-    accuracy_synth, f1_score_synth = fit_model(df_synthetic, df_original_test, target_column, model)
-
-    accuracy_diff = abs(accuracy_original - accuracy_synth)
-    f1_score_diff = abs(f1_score_original - f1_score_synth)
-
-    return accuracy_diff, f1_score_diff
+    return result
 
 
 def fit_model(df_train, df_test, target_column, model):

@@ -4,24 +4,22 @@ from dython.nominal import associations
 import pandas as pd
 import numpy as np
 
-def pairwise_correlation_diff(original_path, synthetic_path):
+def pairwise_correlation_diff(original_data, synthetic_data):
     """
     Calculate the difference in pairwise correlation between the original and synthetic data.
 
     Parameters
     ----------
-    original_path : str
-        Path to the original data.
-    synthetic_path : str
-        Path to the synthetic data.
+    original_data : pandas.DataFrame
+        original data.
+    synthetic_data : pandas.DataFrame
+        synthetic data.
 
     Returns
     -------
     float
         returns the average absolute difference in pairwise correlation.
     """
-    original_data = pd.read_csv(original_path)
-    synthetic_data = pd.read_csv(synthetic_path)
     assoc_original = associations(original_data, plot=False, nom_nom_assoc='theil')
     assoc_synth = associations(synthetic_data, plot=False, nom_nom_assoc='theil')
 
@@ -32,14 +30,14 @@ def pairwise_correlation_diff(original_path, synthetic_path):
     corr_diff = corr_matrix_original - corr_matrix_synth
     return corr_diff.abs().mean().mean()
 
-def jsd(original_path, synthetic_path):
+def jsd(df_original, df_synthetic):
     """Calculate the average Jensen-Shannon divergence between the original and synthetic data.
 
     Parameters
     ----------
-    original_path : str
+    df_original: pandas.DataFrame
         Path to the original data.
-    synthetic_path : str
+    df_synthetic : pandas.DataFrame
         Path to the synthetic data.
 
     Returns
@@ -48,9 +46,6 @@ def jsd(original_path, synthetic_path):
         Returns the average Jensen-Shannon divergence.
     """
     # JSD for categorical data ?
-    df_original = pd.read_csv(original_path)
-    df_synthetic = pd.read_csv(synthetic_path)
-
     # calculate Jensen-Shannon divergence for each column
     results = {}
     for col in df_original.columns:
@@ -67,21 +62,21 @@ def jsd(original_path, synthetic_path):
         # Calculate Jensen-Shannon distance
         js_distance = jensenshannon(freq_original, freq_synth)
         results[col] = js_distance ** 2 # square the JS distance to get the Jensen-Shannon divergence
-        print(f"JSD for column {col}: {results[col]}")
+        #print(f"JSD for column {col}: {results[col]}")
 
     # Return average JSD
     return np.mean(list(results.values()))
 
 
-def wd(original_path, synthetic_path):
+def wd(df_original, df_synthetic):
     """Calculate the average Wasserstein distance between the original and synthetic data.
 
     Parameters
     ----------
-    original_path : str
-        Path to the original data.
-    synthetic_path : str
-        Path to the synthetic data.
+    df_original : pandas.DataFrame
+        original data.
+    df_synthetic : pandas.DataFrame
+        synthetic data.
 
     Returns
     -------
@@ -89,9 +84,6 @@ def wd(original_path, synthetic_path):
         Returns the average Wasserstein distance.
     """
     # WD for continuous data?x
-    df_original = pd.read_csv(original_path)
-    df_synthetic = pd.read_csv(synthetic_path)
-
     results = {}
     for col in df_original.columns:
 
@@ -101,7 +93,7 @@ def wd(original_path, synthetic_path):
 
         # Calculate Wasserstein distance for each column
         results[col] = wasserstein_distance(freq_original, freq_synth)
-        print(f"WD for column {col}: {results[col]}")
+        #print(f"WD for column {col}: {results[col]}")
 
     # Return average WD
     return np.mean(list(results.values()))

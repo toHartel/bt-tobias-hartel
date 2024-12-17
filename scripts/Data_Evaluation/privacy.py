@@ -9,16 +9,16 @@ import numpy as np
 
 
 
-def dcr(path_original, path_synth, model, save_hist=False):
+def dcr(df_original, df_synth, model_name, save_hist=False):
     """ Compute distance to closest record (DCR) and return the average distance.
 
     Parameters
     ----------
-    path_original : str
+    df_original : pandas.DataFrame
         path to the original data
-    path_synth : str
+    df_synth : pandas.DataFrame
         path to the synthetic data
-    model : str
+    model_name : str
         name of the model
     save_hist : bool, default=False
         save the histogram of distances
@@ -28,10 +28,9 @@ def dcr(path_original, path_synth, model, save_hist=False):
     float
         average distance to the closest record
     """
-    data_original = pd.read_csv(path_original)
-    data_synth = pd.read_csv(path_synth)
-    X = np.asarray(data_original)
-    Y = np.asarray(data_synth)
+
+    X = np.asarray(df_original, dtype=np.float64)
+    Y = np.asarray(df_synth, dtype=np.float64)
 
     # Calculate Gower distance matrix
     distances = gower.gower_matrix(X, Y)
@@ -41,22 +40,22 @@ def dcr(path_original, path_synth, model, save_hist=False):
         plt.hist(distances.flatten(), bins=20, alpha=0.8)
         plt.xlabel('Distance')
         plt.ylabel('Frequency')
-        plt.title(f'Histogram of Gower distances - {model}')
-        plt.savefig('Plots/dcr_hist_' + model + '.png' )
+        plt.title(f'Histogram of Gower distances - {model_name}')
+        plt.savefig('Plots/DCR/dcr_hist_' + model_name + '.png' )
 
         # Clear the plot
         plt.clf()
 
     return np.mean(distances)
 
-def nndr(path_original, path_synth):
+def nndr(df_original, df_synth):
     """ Compute nearest neighbor distance ratio (NNDR) and return the average ratio.
 
     Parameters
     ----------
-    path_original : str
+    df_original : pandas.DataFrame
         path to the original data
-    path_synth : str
+    df_synth : pandas.DataFrame
         path to the synthetic data
         
     Returns
@@ -64,12 +63,12 @@ def nndr(path_original, path_synth):
     float
         average nearest neighbor distance ratio
     """
-    # Load datasets
-    data_original = pd.read_csv(path_original)
-    data_synth = pd.read_csv(path_synth)
+
+    X = np.asarray(df_original, dtype=np.float64)
+    Y = np.asarray(df_synth, dtype=np.float64)
 
     # Calculate Gower distance matrix
-    distances = gower.gower_matrix(data_synth, data_original)
+    distances = gower.gower_matrix(Y, X)
 
     # For each synthetic instance, find the two nearest neighbors in the original dataset
     nndr_values = []
@@ -84,14 +83,14 @@ def nndr(path_original, path_synth):
     return np.mean(nndr_values) if nndr_values else float('nan')
 
 
-def mia(path_original, path_synth, save_plts=False):
+def mia(df_original, df_synth, model_name, save_plts=False):
     """Perform membership inference attack and return the precision and accuracy values for different parameters.
 
     Parameters
     ----------
-    path_original : str
+    df_original : pandas.DataFrame
         path to the original data
-    path_synth : str
+    df_synth : pandas.DataFrame
         path to the synthetic data
     save_plts : bool, default=False
         whether to save the accuracy and precision plots
@@ -103,14 +102,10 @@ def mia(path_original, path_synth, save_plts=False):
     dict 
         accuracy values for different thresholds
     """
-    # Load datasets
-    data_original = pd.read_csv(path_original)
-    data_synth = pd.read_csv(path_synth)
-
 
     proportions = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
     thresholds = [0.1, 0.2, 0.3, 0.4]
-    synth_indices = data_synth.index.tolist()
+    synth_indices = df_synth.index.tolist()
 
     precision_values = dict()
     accuracy_values = dict()
@@ -120,8 +115,8 @@ def mia(path_original, path_synth, save_plts=False):
         accuracy_values[th] = []
 
         for prop in proportions:
-            attacker_data = data_original.sample(frac=prop, random_state=42)
-            precision_val, accuracy_val = evaluate_membership_attack(attacker_data, synth_indices, data_synth, th)
+            attacker_data = df_original.sample(frac=prop, random_state=42)
+            precision_val, accuracy_val = evaluate_membership_attack(attacker_data, synth_indices, df_synth, th)
 
             precision_values[th].append(precision_val)
             accuracy_values[th].append(accuracy_val)
@@ -133,9 +128,9 @@ def mia(path_original, path_synth, save_plts=False):
             plt.plot(proportions, precision_values[th], label=f'Threshold: {th}', marker='o')
         plt.xlabel('Proportions')
         plt.ylabel('Precision')
-        plt.title('Precision')
+        plt.title(f'{model_name}: Precision')
         plt.legend()
-        plt.savefig('mia_precision.png')
+        plt.savefig(f'Plots/MIA/{model_name}_mia_precision.png')
 
         # Plot accuracy values
         plt.figure(figsize=(8, 6))
@@ -143,8 +138,8 @@ def mia(path_original, path_synth, save_plts=False):
             plt.plot(proportions, accuracy_values[th], label=f'Threshold: {th}', marker='o')
         plt.xlabel('Proportions')
         plt.ylabel('Accuracy')
-        plt.title('Accuracy')
+        plt.title(f'{model_name}: Accuracy')
         plt.legend()
-        plt.savefig('mia_accuracy.png')
+        plt.savefig(f'Plots/MIA/{model_name}_mia_accuracy.png')
     
     return precision_values, accuracy_values
