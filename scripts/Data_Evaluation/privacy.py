@@ -41,7 +41,7 @@ def dcr(df_original, df_synth, model_name, dataset_nr, save_hist=False):
         plt.xlabel('Distance')
         plt.ylabel('Frequency')
         plt.title(f'Histogram of Gower distances - {model_name}')
-        plt.savefig(f'Plots/DCR/Dataset_{dataset_nr}/dcr_hist_' + model_name + '.png' )
+        plt.savefig(f'Evaluation_Results/Plots/DCR/Dataset_{dataset_nr}/dcr_hist_' + model_name + '.png' )
 
         # Clear the plot
         plt.clf()
@@ -136,7 +136,7 @@ def mia(df_original, df_synth, model_name, dataset_nr, save_plts=False):
         plt.ylabel('Precision')
         plt.title(f'{model_name}: Precision')
         plt.legend()
-        plt.savefig(f'Plots/MIA/Dataset_{dataset_nr}/{model_name}_mia_precision.png')
+        plt.savefig(f'Evaluation_Results/Plots/MIA/Dataset_{dataset_nr}/{model_name}_mia_precision.png')
 
         # Plot accuracy values
         plt.figure(figsize=(8, 6))
@@ -146,7 +146,7 @@ def mia(df_original, df_synth, model_name, dataset_nr, save_plts=False):
         plt.ylabel('Accuracy')
         plt.title(f'{model_name}: Accuracy')
         plt.legend()
-        plt.savefig(f'Plots/MIA/Dataset_{dataset_nr}/{model_name}_mia_accuracy.png')
+        plt.savefig(f'Evaluation_Results/Plots/MIA/Dataset_{dataset_nr}/{model_name}_mia_accuracy.png')
     
     result = {}
     result['precision'] = precision_values
