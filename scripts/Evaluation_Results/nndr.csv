@@ -1,0 +1,7 @@
+Dataset,Model,Avg NNDR
+1,synthpop,0.7334785
+1,ds,0.9011939
+1,tvae,0.8343532
+1,gaussian_copula,0.87677413
+1,copula_gan,0.886875
+1,ctgan,0.88753396

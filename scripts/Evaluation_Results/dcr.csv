@@ -1,0 +1,7 @@
+Dataset,Model,Avg DCR
+1,synthpop,0.37214082
+1,ds,0.4117684
+1,tvae,0.36430714
+1,gaussian_copula,0.38095614
+1,copula_gan,0.37946597
+1,ctgan,0.3856015
