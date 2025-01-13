@@ -3,6 +3,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score, classification_report, roc_auc_score
 import pandas as pd
+import numpy as np
 
 
     
@@ -52,10 +53,11 @@ def run_utility_eval(df_original_train, df_original_test, df_synthetic, target_c
     # Reindex the test data to match the training data
     #df_original_test = df_original_test.reindex(columns=df_original_train.columns, fill_value=0)
     result = {}
-    result["acc_original"], result["f1_original"] = fit_model(df_original_train, df_original_test, target_column, model)
-    result["acc_synth"], result["f1_synth"] = fit_model(df_synthetic, df_original_test, target_column, model)
-    result["acc_diff"] = result["acc_original"] - result["acc_synth"]
-    result["f1_diff"] = result["f1_original"] - result["f1_synth"]
+    result["acc_original"], result["f1_original"], result["roc_auc_original"] = fit_model(df_original_train, df_original_test, target_column, model)
+    result["acc_synth"], result["f1_synth"], result["roc_auc_synth"] = fit_model(df_synthetic, df_original_test, target_column, model)
+    result["acc_diff"] = round(result["acc_original"] - result["acc_synth"], 2)
+    result["f1_diff"] = round(result["f1_original"] - result["f1_synth"], 2)
+    result["roc_auc_diff"] = round(result["roc_auc_original"] - result["roc_auc_synth"], 2)
 
     return result
 
@@ -88,12 +90,13 @@ def fit_model(df_train, df_test, target_column, model):
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
+    y_proba = model.predict_proba(X_test)
 
-    accuracy_original, f1_score_original = calculate_metrics(y_test, y_pred)
+    accuracy_original, f1_score_original, roc_auc_original = calculate_metrics(y_test, y_pred, y_proba)
 
-    return accuracy_original, f1_score_original
+    return accuracy_original, f1_score_original, roc_auc_original
 
-def calculate_metrics(y_test, y_pred):
+def calculate_metrics(y_test, y_pred, y_proba):
     """ Calculate the accuracy and F1 score of the predictions.
 
     Parameters
@@ -108,7 +111,10 @@ def calculate_metrics(y_test, y_pred):
     float, float 
         Returns the accuracy and F1 score of the predictions.
     """
-    accuracy = accuracy_score(y_test, y_pred)
-    f1_score = classification_report(y_test, y_pred, output_dict=True)['weighted avg']['f1-score']
-
-    return accuracy, f1_score
+    accuracy = round(accuracy_score(y_test, y_pred), 2)
+    f1_score = round(classification_report(y_test, y_pred, output_dict=True)['weighted avg']['f1-score'], 2)
+    if y_proba.shape[1] == 2:
+        roc_auc = round(roc_auc_score(y_test, y_proba[:, 1]), 2)
+    else:
+        roc_auc = round(roc_auc_score(y_test, y_proba, multi_class='ovr'), 2)
+    return accuracy, f1_score, roc_auc

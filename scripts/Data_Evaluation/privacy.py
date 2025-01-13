@@ -9,7 +9,7 @@ import numpy as np
 
 
 
-def dcr(df_original, df_synth, model_name, save_hist=False):
+def dcr(df_original, df_synth, model_name, dataset_nr, save_hist=False):
     """ Compute distance to closest record (DCR) and return the average distance.
 
     Parameters
@@ -41,7 +41,7 @@ def dcr(df_original, df_synth, model_name, save_hist=False):
         plt.xlabel('Distance')
         plt.ylabel('Frequency')
         plt.title(f'Histogram of Gower distances - {model_name}')
-        plt.savefig('Plots/DCR/dcr_hist_' + model_name + '.png' )
+        plt.savefig(f'Plots/DCR/Dataset_{dataset_nr}/dcr_hist_' + model_name + '.png' )
 
         # Clear the plot
         plt.clf()
@@ -77,13 +77,18 @@ def nndr(df_original, df_synth):
         sorted_distances = np.sort(row)
         if len(sorted_distances) > 1:  # Ensure there are at least two neighbors
             nndr = sorted_distances[0] / sorted_distances[1]
+            # Set nndr to 0 if it is NaN
+            if np.isnan(nndr):
+                nndr = 0
             nndr_values.append(nndr)
+        else:
+            print('Warning: Not enough neighbors found for a synthetic instance')
 
     # Return the mean NNDR value
     return np.mean(nndr_values) if nndr_values else float('nan')
 
 
-def mia(df_original, df_synth, model_name, save_plts=False):
+def mia(df_original, df_synth, model_name, dataset_nr, save_plts=False):
     """Perform membership inference attack and return the precision and accuracy values for different parameters.
 
     Parameters
@@ -118,28 +123,33 @@ def mia(df_original, df_synth, model_name, save_plts=False):
             attacker_data = df_original.sample(frac=prop, random_state=42)
             precision_val, accuracy_val = evaluate_membership_attack(attacker_data, synth_indices, df_synth, th)
 
-            precision_values[th].append(precision_val)
-            accuracy_values[th].append(accuracy_val)
-    
+            precision_values[th].append(round(precision_val, 2))
+            accuracy_values[th].append(round(accuracy_val, 2))
+
     if save_plts:
+        markers = ['v', '^', '<', '>']
         # Plot precision values
         plt.figure(figsize=(8, 6))
-        for th in thresholds:
-            plt.plot(proportions, precision_values[th], label=f'Threshold: {th}', marker='o')
+        for i, th in enumerate(thresholds):
+            plt.plot(proportions, precision_values[th], label=f'Threshold: {th}', marker=markers[i])
         plt.xlabel('Proportions')
         plt.ylabel('Precision')
         plt.title(f'{model_name}: Precision')
         plt.legend()
-        plt.savefig(f'Plots/MIA/{model_name}_mia_precision.png')
+        plt.savefig(f'Plots/MIA/Dataset_{dataset_nr}/{model_name}_mia_precision.png')
 
         # Plot accuracy values
         plt.figure(figsize=(8, 6))
-        for th in thresholds:
-            plt.plot(proportions, accuracy_values[th], label=f'Threshold: {th}', marker='o')
+        for i, th in enumerate(thresholds):
+            plt.plot(proportions, accuracy_values[th], label=f'Threshold: {th}', marker=markers[i])
         plt.xlabel('Proportions')
         plt.ylabel('Accuracy')
         plt.title(f'{model_name}: Accuracy')
         plt.legend()
-        plt.savefig(f'Plots/MIA/{model_name}_mia_accuracy.png')
+        plt.savefig(f'Plots/MIA/Dataset_{dataset_nr}/{model_name}_mia_accuracy.png')
     
-    return precision_values, accuracy_values
+    result = {}
+    result['precision'] = precision_values
+    result['accuracy'] = accuracy_values
+    
+    return result

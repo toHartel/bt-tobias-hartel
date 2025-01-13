@@ -11,7 +11,7 @@ from sdv.single_table import GaussianCopulaSynthesizer
 from sdv.single_table import CopulaGANSynthesizer
 import time
 
-def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
+def sdv_generate_data(data_path: str, dataset_nr: str, num_samples: int = 1000) -> None:
 
     data = pd.read_csv(data_path)
 
@@ -30,7 +30,7 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     fit_time = time.time() - start_time
     print(f"Time taken to fit copula_gan: {fit_time:.2f} seconds\n")
     copula_gan_samples = copula_gan.sample(num_samples)
-    copula_gan_samples.to_csv('Synthetic_Data/copula_gan_samples.csv', sep = ",", index = False)
+    copula_gan_samples.to_csv(f'Synthetic_Data/Dataset_{dataset_nr}/copula_gan_samples.csv', sep = ",", index = False)
 
 
     # Fit und Sample für ctgan
@@ -40,7 +40,7 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     fit_time = time.time() - start_time
     print(f"Time taken to fit ctgan: {fit_time:.2f} seconds\n")
     ctgan_samples = ctgan.sample(num_samples)
-    ctgan_samples.to_csv('Synthetic_Data/ctgan_samples.csv', sep = ",", index = False)
+    ctgan_samples.to_csv(f'Synthetic_Data/Dataset_{dataset_nr}/ctgan_samples.csv', sep = ",", index = False)
 
 
     # Fit und Sample für tvae
@@ -50,7 +50,7 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     fit_time = time.time() - start_time
     print(f"Time taken to fit tvae: {fit_time:.2f} seconds\n")
     tvae_samples = tvae.sample(num_samples)
-    tvae_samples.to_csv('Synthetic_Data/tvae_samples.csv', sep = ",", index = False)
+    tvae_samples.to_csv(f'Synthetic_Data/Dataset_{dataset_nr}/tvae_samples.csv', sep = ",", index = False)
 
 
     # Fit und Sample für gaussian_copula
@@ -60,4 +60,4 @@ def sdv_generate_data(data_path: str, num_samples: int = 1000) -> None:
     fit_time = time.time() - start_time
     print(f"Time taken to fit gaussian_copula: {fit_time:.2f} seconds\n")
     gaussian_samples = gaussian_copula.sample(num_samples)
-    gaussian_samples.to_csv('Synthetic_Data/gaussian_samples.csv', sep = ",", index = False)
+    gaussian_samples.to_csv(f'Synthetic_Data/Dataset_{dataset_nr}/gaussian_samples.csv', sep = ",", index = False)
