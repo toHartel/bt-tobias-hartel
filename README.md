@@ -8,6 +8,8 @@ Topic: Synthetic Data Generation for Learning Analytics
 
 [Proposal](https://www.overleaf.com/project/66ba05a898223c08af9bee3f)
 
+[Bachelor thesis](https://latex.hu-berlin.de/project/6798c98d1a4191d5c3c6b51a)
+
 ## Code
 
 For SDG and evaluation examples see notebooks (_dataset_i.ipynb_) in [scripts](scripts) folder.
