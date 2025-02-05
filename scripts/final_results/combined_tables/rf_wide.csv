@@ -1,0 +1,9 @@
+,Accuracy Difference,Accuracy Difference,Accuracy Difference,Accuracy Difference,Accuracy Difference,Accuracy Difference,F1 Score Difference,F1 Score Difference,F1 Score Difference,F1 Score Difference,F1 Score Difference,F1 Score Difference,ROC AUC Difference,ROC AUC Difference,ROC AUC Difference,ROC AUC Difference,ROC AUC Difference,ROC AUC Difference
+Model,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae
+Dataset,,,,,,,,,,,,,,,,,,
+1,0.42,0.5,0.46,0.37,0.07,0.19,0.44,0.55,0.47,0.42,0.07,0.24,0.4,0.43,0.49,0.4,0.05,0.1
+2,-0.07,0.43,0.04,-0.06,-0.04,-0.03,0.01,0.5,0.05,0.01,0.01,-0.02,0.06,0.02,0.04,-0.04,-0.05,-0.03
+3,0.0,0.0,0.33,0.0,-0.09,-0.04,0.05,0.05,0.25,0.05,-0.1,-0.04,0.05,-0.03,0.34,0.04,-0.03,0.07
+5,0.18,0.24,0.14,0.04,0.03,0.0,0.15,0.19,0.14,0.12,0.11,0.04,0.21,0.21,0.14,0.1,-0.02,0.05
+6,0.02,0.03,0.02,0.05,0.02,0.04,0.06,0.02,0.03,0.09,0.02,0.03,0.04,0.02,0.06,0.12,0.03,0.04
+Average,0.11000000000000001,0.24,0.198,0.07999999999999999,-0.0019999999999999983,0.032,0.142,0.262,0.188,0.13799999999999998,0.022,0.05,0.152,0.13,0.21400000000000005,0.124,-0.004000000000000001,0.046
