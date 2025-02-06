@@ -3,7 +3,7 @@ from DataSynthesizer.DataGenerator import DataGenerator
 
 def ds_generate_data(
     data_path: str, 
-    dataset_nr: str,
+    dataset_name: str,
     epsilon: float = 1.0, 
     degree_of_bayesian_network: int = 2, 
     num_samples: int = 1000, 
@@ -22,7 +22,8 @@ def ds_generate_data(
         The number of tuples to generate
     output_path: str
         The path to save the synthetic data
-
+    dataset_name: str
+        The name of the original dataset
     Returns:
     --------
     None
@@ -37,7 +38,7 @@ def ds_generate_data(
 
     generator = DataGenerator()
     generator.generate_dataset_in_correlated_attribute_mode(num_samples, description_file)
-    output_path = f'Synthetic_Data/Dataset_{dataset_nr}/ds_samples.csv'
+    output_path = f'../data/synthetic_data/{dataset_name}/ds.csv'
     generator.save_synthetic_data(output_path)
 
 

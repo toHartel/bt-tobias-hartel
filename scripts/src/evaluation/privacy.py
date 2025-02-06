@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt
-from Data_Evaluation.membership_inference import evaluate_membership_attack
+from evaluation.membership_inference import evaluate_membership_attack
 import warnings
 warnings.filterwarnings("ignore")
 import numpy as np
 from scipy.spatial.distance import cdist
 
-def dcr(df_original, df_synth, model_name, dataset_nr, within=False, save_hist=False):
+def dcr(df_original, df_synth, model_name, dataset_name, within=False, save_hist=False):
     """ Compute distance to closest record (DCR) and return the average distance.
 
     Parameters
@@ -16,8 +16,8 @@ def dcr(df_original, df_synth, model_name, dataset_nr, within=False, save_hist=F
         path to the synthetic data
     model_name : str
         name of the model
-    dataset_nr : int
-        number of the dataset
+    dataset_name : str
+        name of the original dataset
     within : {"Original",  "Synthetic", False}, default=False
         whether to compute dcr within the original or synthetic data or between the two
     save_hist : bool, default=False
@@ -51,7 +51,7 @@ def dcr(df_original, df_synth, model_name, dataset_nr, within=False, save_hist=F
         plt.xlabel('Distance')
         plt.ylabel('Frequency')
         plt.title(f'Histogram of eucledian distances - {model_name}')
-        plt.savefig(f'Evaluation_Results/Plots/DCR/Dataset_{dataset_nr}/dcr_hist_' + model_name + '.png' )
+        plt.savefig(f'../data/results/plots/dcr/{dataset_name}/{model_name}_dcr_hist.png')
 
         # Clear the plot
         plt.clf()
@@ -109,7 +109,7 @@ def nndr(df_original, df_synth, within=False):
     # Return the mean NNDR value
     return round(np.percentile(nndr_values, 5), 3)
 
-def mia(df_original, df_synth, model_name, dataset_nr, save_plts=False):
+def mia(df_original, df_synth, model_name, dataset_name, save_plts=False):
     """Perform membership inference attack and return the precision and accuracy values for different parameters.
 
     Parameters
@@ -118,6 +118,10 @@ def mia(df_original, df_synth, model_name, dataset_nr, save_plts=False):
         path to the original data
     df_synth : pandas.DataFrame
         path to the synthetic data
+    model_name : str
+        name of the model
+    dataset_name : str
+        name of the original dataset
     save_plts : bool, default=False
         whether to save the accuracy and precision plots
 
@@ -157,7 +161,7 @@ def mia(df_original, df_synth, model_name, dataset_nr, save_plts=False):
         plt.ylabel('Precision')
         plt.title(f'{model_name}: Precision')
         plt.legend()
-        plt.savefig(f'Evaluation_Results/Plots/MIA/Dataset_{dataset_nr}/{model_name}_mia_precision.png')
+        plt.savefig(f'../data/results/plots/mia/{dataset_name}/{model_name}_mia_precision.png')
 
         # Plot accuracy values
         plt.figure(figsize=(8, 6))
@@ -167,7 +171,7 @@ def mia(df_original, df_synth, model_name, dataset_nr, save_plts=False):
         plt.ylabel('Accuracy')
         plt.title(f'{model_name}: Accuracy')
         plt.legend()
-        plt.savefig(f'Evaluation_Results/Plots/MIA/Dataset_{dataset_nr}/{model_name}_mia_accuracy.png')
+        plt.savefig(f'../data/results/plots/mia/{dataset_name}/{model_name}_mia_accuracy.png')
     
     result = {}
     result['precision'] = precision_values

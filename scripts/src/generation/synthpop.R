@@ -8,7 +8,7 @@ if (length(args) < 3) {
 
 input_file <- args[1]  # Erster Parameter: Pfad zur Eingabedatei
 k <- as.numeric(args[2])  # Zweiter Parameter: Anzahl der zu generierenden Samples
-n <- args[3] # Dritter Parameter: Nummer des gewählten Datensatzes
+dataset_name <- args[3] # Dritter Parameter: Nummer des gewählten Datensatzes
 
 # Benötigte Pakete laden
 if (!requireNamespace("synthpop", quietly = TRUE)) install.packages("synthpop")
@@ -28,7 +28,7 @@ syn_data <- syn(data, k = k)
 print(head(syn_data))
 
 # Output-Dateipfad festlegen
-output_file <- glue("Synthetic_Data/Dataset_{n}/synthpop_samples")
+output_file <- glue("../data/synthetic_data/{dataset_name}/synthpop")
 dir.create(dirname(output_file), showWarnings = FALSE, recursive = TRUE)
 
 # Synthesedaten speichern

@@ -11,7 +11,11 @@ from sdv.single_table import GaussianCopulaSynthesizer
 from sdv.single_table import CopulaGANSynthesizer
 import time
 
-def sdv_generate_data(data_path: str, dataset_nr: str, num_samples: int = 1000) -> None:
+def sdv_generate_data(
+    data_path: str, 
+    dataset_name: str, 
+    num_samples: int = 1000
+) -> None:
     """ Generate synthetic data using the models CopulaGAN, CTGAN, TVAE and GaussianCopula from the SDV library
 
     Parameters
@@ -46,7 +50,7 @@ def sdv_generate_data(data_path: str, dataset_nr: str, num_samples: int = 1000) 
     fit_time = time.time() - start_time
     print(f"Time taken to fit copula_gan: {fit_time:.2f} seconds\n")
     copula_gan_samples = copula_gan.sample(num_samples)
-    copula_gan_samples.to_csv(f'Synthetic_Data/Dataset_{dataset_nr}/copula_gan_samples.csv', sep = ",", index = False)
+    copula_gan_samples.to_csv(f'../data/synthetic_data/{dataset_name}/copula_gan.csv', sep = ",", index = False)
 
 
     # Fit und Sample für ctgan
@@ -56,7 +60,7 @@ def sdv_generate_data(data_path: str, dataset_nr: str, num_samples: int = 1000) 
     fit_time = time.time() - start_time
     print(f"Time taken to fit ctgan: {fit_time:.2f} seconds\n")
     ctgan_samples = ctgan.sample(num_samples)
-    ctgan_samples.to_csv(f'Synthetic_Data/Dataset_{dataset_nr}/ctgan_samples.csv', sep = ",", index = False)
+    ctgan_samples.to_csv(f'../data/synthetic_data/{dataset_name}/ctgan.csv', sep = ",", index = False)
 
 
     # Fit und Sample für tvae
@@ -66,7 +70,7 @@ def sdv_generate_data(data_path: str, dataset_nr: str, num_samples: int = 1000) 
     fit_time = time.time() - start_time
     print(f"Time taken to fit tvae: {fit_time:.2f} seconds\n")
     tvae_samples = tvae.sample(num_samples)
-    tvae_samples.to_csv(f'Synthetic_Data/Dataset_{dataset_nr}/tvae_samples.csv', sep = ",", index = False)
+    tvae_samples.to_csv(f'../data/synthetic_data/{dataset_name}/tvae.csv', sep = ",", index = False)
 
 
     # Fit und Sample für gaussian_copula
@@ -76,4 +80,4 @@ def sdv_generate_data(data_path: str, dataset_nr: str, num_samples: int = 1000) 
     fit_time = time.time() - start_time
     print(f"Time taken to fit gaussian_copula: {fit_time:.2f} seconds\n")
     gaussian_samples = gaussian_copula.sample(num_samples)
-    gaussian_samples.to_csv(f'Synthetic_Data/Dataset_{dataset_nr}/gaussian_samples.csv', sep = ",", index = False)
+    gaussian_samples.to_csv(f'../data/synthetic_data/{dataset_name}/gaussian_copula.csv', sep = ",", index = False)
