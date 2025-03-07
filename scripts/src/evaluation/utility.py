@@ -8,12 +8,12 @@ def run_utility_eval(df_original_train, df_original_test, df_synthetic, target_c
 
     Parameters
     ----------
-    data_train : pandas.DataFrame
-        Path to training data
-    data_test : pandas.DataFrame
-        Path to test data
-    synth_data : pandas.DataFrame
-        Path to synthetic data
+    df_original_train : pandas.DataFrame
+        Dataframe with the training data
+    df_original_test : pandas.DataFrame
+        Dataframe with the test data
+    df_synthetic : pandas.DataFrame
+        Dataframe with the synthetic data
     target_column : str
         Target variable used for prediction
     utility_function : str

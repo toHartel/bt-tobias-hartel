@@ -11,9 +11,9 @@ def dcr(df_original, df_synth, model_name, dataset_name, within=False, save_hist
     Parameters
     ----------
     df_original : pandas.DataFrame
-        path to the original data
+        Dataframe of the original data
     df_synth : pandas.DataFrame
-        path to the synthetic data
+        Dataframe of the synthetic data
     model_name : str
         name of the model
     dataset_name : str
@@ -65,9 +65,9 @@ def nndr(df_original, df_synth, within=False):
     Parameters
     ----------
     df_original : pandas.DataFrame
-        path to the original data
+        Dataframe of the original data
     df_synth : pandas.DataFrame
-        path to the synthetic data
+        Dataframe of the synthetic data
     within : {"Original",  "Synthetic", False}, default=False
         whether to compute nndr within the original or synthetic data or between the two
         
@@ -109,15 +109,15 @@ def nndr(df_original, df_synth, within=False):
     # Return the mean NNDR value
     return round(np.percentile(nndr_values, 5), 3)
 
-def mia(df_original, df_synth, model_name, dataset_name, save_plts=False):
+def mia(df_train, df_synth, model_name, dataset_name, save_plts=False):
     """Perform membership inference attack and return the precision and accuracy values for different parameters.
 
     Parameters
     ----------
-    df_original : pandas.DataFrame
-        path to the original data
+    df_train : pandas.DataFrame
+        Dataframe of the train data
     df_synth : pandas.DataFrame
-        path to the synthetic data
+       Dataframe of the synthetic data
     model_name : str
         name of the model
     dataset_name : str
@@ -135,7 +135,7 @@ def mia(df_original, df_synth, model_name, dataset_name, save_plts=False):
 
     proportions = [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
     thresholds = [0.1, 0.2, 0.3, 0.4]
-    synth_indices = df_synth.index.tolist()
+    train_data_indices = df_train.index.tolist()
 
     precision_values = dict()
     accuracy_values = dict()
@@ -145,8 +145,8 @@ def mia(df_original, df_synth, model_name, dataset_name, save_plts=False):
         accuracy_values[th] = []
 
         for prop in proportions:
-            attacker_data = df_original.sample(frac=prop, random_state=42)
-            precision_val, accuracy_val = evaluate_membership_attack(attacker_data, synth_indices, df_synth, th)
+            attacker_data = df_train.sample(frac=prop, random_state=42)
+            precision_val, accuracy_val = evaluate_membership_attack(attacker_data, train_data_indices, df_synth, th)
 
             precision_values[th].append(round(precision_val, 2))
             accuracy_values[th].append(round(accuracy_val, 2))

@@ -10,15 +10,17 @@ def pairwise_correlation_diff(original_data, synthetic_data):
     Parameters
     ----------
     original_data : pandas.DataFrame
-        original data.
+        Original data.
     synthetic_data : pandas.DataFrame
-        synthetic data.
+        Synthetic data.
 
     Returns
     -------
     float
         returns the average absolute difference in pairwise correlation.
     """
+    # Use the Theil's U association measure to calculate the correlation matrix for categorical columns
+    # For continuous columns, the Pearson correlation coefficient is used (by default)
     assoc_original = associations(original_data, plot=False, nom_nom_assoc='theil')
     assoc_synth = associations(synthetic_data, plot=False, nom_nom_assoc='theil')
 
@@ -35,9 +37,9 @@ def jsd(df_original, df_synthetic):
     Parameters
     ----------
     df_original: pandas.DataFrame
-        Path to the original data.
+        Original data.
     df_synthetic : pandas.DataFrame
-        Path to the synthetic data.
+        Synthetic data.
 
     Returns
     -------
@@ -73,16 +75,16 @@ def wd(df_original, df_synthetic):
     Parameters
     ----------
     df_original : pandas.DataFrame
-        original data.
+        Original data.
     df_synthetic : pandas.DataFrame
-        synthetic data.
+        Synthetic data.
 
     Returns
     -------
     float
         Returns the average Wasserstein distance.
     """
-    # WD for continuous data?x
+    # WD for continuous data?
     results = {}
     for col in df_original.columns:
 
@@ -92,7 +94,6 @@ def wd(df_original, df_synthetic):
 
         # Calculate Wasserstein distance for each column
         results[col] = wasserstein_distance(freq_original, freq_synth)
-        #print(f"WD for column {col}: {results[col]}")
 
     # Return average WD
     return np.mean(list(results.values()))

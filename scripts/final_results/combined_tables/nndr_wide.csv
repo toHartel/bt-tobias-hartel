@@ -1,9 +1,9 @@
 ,NNDR 5th percentile,NNDR 5th percentile,NNDR 5th percentile,NNDR 5th percentile,NNDR 5th percentile,NNDR 5th percentile,NNDR 5th percentile (within Real),NNDR 5th percentile (within Real),NNDR 5th percentile (within Real),NNDR 5th percentile (within Real),NNDR 5th percentile (within Real),NNDR 5th percentile (within Real),NNDR 5th percentile (within Synthetic),NNDR 5th percentile (within Synthetic),NNDR 5th percentile (within Synthetic),NNDR 5th percentile (within Synthetic),NNDR 5th percentile (within Synthetic),NNDR 5th percentile (within Synthetic)
 Model,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae
 Dataset,,,,,,,,,,,,,,,,,,
-1,0.569,0.569,0.591,0.562,0.464,0.59,0.438,0.438,0.438,0.438,0.438,0.438,0.632,0.632,0.566,0.612,0.357,0.586
+1,0.572,0.558,0.56,0.557,0.439,0.564,0.493,0.493,0.493,0.493,0.493,0.493,0.614,0.523,0.569,0.499,0.449,0.522
 2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-3,0.536,0.622,0.543,0.533,0.334,0.534,0.583,0.583,0.583,0.583,0.583,0.583,0.666,0.691,0.546,0.694,0.472,0.647
-5,0.761,0.768,0.419,0.791,0.75,0.832,0.775,0.775,0.775,0.775,0.775,0.775,0.834,0.832,0.707,0.832,0.745,0.0
-6,0.196,0.174,0.212,0.132,0.045,0.203,0.073,0.073,0.073,0.073,0.073,0.073,0.143,0.131,0.151,0.114,0.065,0.114
-Average,0.412,0.427,0.353,0.404,0.319,0.432,0.374,0.374,0.374,0.374,0.374,0.374,0.455,0.457,0.394,0.45,0.328,0.269
+3,0.494,0.513,0.497,0.568,0.426,0.557,0.583,0.583,0.583,0.583,0.583,0.583,0.559,0.393,0.517,0.637,0.449,0.479
+4,0.179,0.181,0.223,0.13,0.046,0.188,0.073,0.073,0.073,0.073,0.073,0.073,0.186,0.204,0.216,0.207,0.072,0.18
+5,0.837,0.5,0.403,0.799,0.75,0.858,0.771,0.771,0.771,0.771,0.771,0.771,0.832,0.775,0.663,0.794,0.791,0.0
+Average,0.416,0.35,0.337,0.411,0.332,0.433,0.384,0.384,0.384,0.384,0.384,0.384,0.438,0.379,0.393,0.427,0.352,0.236

@@ -40,7 +40,7 @@ def sdv_generate_data(
 
     copula_gan = CopulaGANSynthesizer(metadata)
     ctgan = CTGANSynthesizer(metadata)
-    tvae = TVAESynthesizer(metadata)
+    tvae = TVAESynthesizer(metadata, enforce_min_max_values=True)
     gaussian_copula = GaussianCopulaSynthesizer(metadata)
     
     # Fit und Sample für copula_gan
