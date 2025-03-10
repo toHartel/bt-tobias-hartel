@@ -47,10 +47,12 @@ def dcr(df_original, df_synth, model_name, dataset_name, within=False, save_hist
 
     if save_hist:
         # Plot histogram of distances
-        plt.hist(dcr_values.flatten(), bins=20, alpha=0.8)
+        bins = np.arange(0, 50, 1)
+        dcr_values_clipped = np.clip(dcr_values, bins[0], bins[-1])
+        plt.hist(dcr_values_clipped.flatten(), bins=bins, alpha=0.8)
         plt.xlabel('Distance')
         plt.ylabel('Frequency')
-        plt.title(f'Histogram of eucledian distances - {model_name}')
+        plt.title(f'DCR values - {model_name}')
         plt.savefig(f'../data/results/plots/dcr/{dataset_name}/{model_name}_dcr_hist.png')
 
         # Clear the plot
