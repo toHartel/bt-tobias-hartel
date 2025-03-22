@@ -4,31 +4,28 @@ from sdv.metadata import SingleTableMetadata
 from sdv.evaluation.single_table import run_diagnostic, evaluate_quality
 import os
 
-def sd_metrics(original_data: str, synthetic_data: str) -> None:
+def sd_metrics(train_data, synthetic_data) -> None:
     """
     Evaluate the quality of the synthetic data using SDMetrics from SDV.
     
     Parameters
     ----------
-    original_data: str 
-        Path to the original data
+    train_data: pandas.DataFrame 
+        DataFrame of original training data 
     synthetic_data: str 
-        Path to the synthetic data
+        DataFrame of synthetic data 
 
     Returns
     -------
     pandas.DataFrame
         Returns the diagnostic and quality metrics of the synthetic data.
     """
-    data = pd.read_csv(original_data)
 
     metadata = SingleTableMetadata()
-    metadata.detect_from_dataframe(data)
+    metadata.detect_from_dataframe(train_data)
 
-    synthetic_data = pd.read_csv(synthetic_data)
-
-    diagnostic = run_diagnostic(data, synthetic_data, metadata, verbose=False)
-    quality = evaluate_quality(data, synthetic_data, metadata, verbose=False)
+    diagnostic = run_diagnostic(train_data, synthetic_data, metadata, verbose=False)
+    quality = evaluate_quality(train_data, synthetic_data, metadata, verbose=False)
 
     diagnostic_df = diagnostic.get_properties().set_index('Property').T
     quality_df = quality.get_properties().set_index('Property').T

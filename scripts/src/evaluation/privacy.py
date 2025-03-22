@@ -6,7 +6,7 @@ import numpy as np
 from scipy.spatial.distance import cdist
 
 def dcr(df_original, df_synth, model_name, dataset_name, within=False, save_hist=False):
-    """ Compute distance to closest record (DCR) and return the average distance.
+    """ Compute distance to closest record (DCR) and return the 5th percentile.
 
     Parameters
     ----------
@@ -62,7 +62,7 @@ def dcr(df_original, df_synth, model_name, dataset_name, within=False, save_hist
     return round(np.percentile(dcr_values, 5), 3)
 
 def nndr(df_original, df_synth, within=False):
-    """ Compute nearest neighbor distance ratio (NNDR) and return the average ratio.
+    """ Compute nearest neighbor distance ratio (NNDR) and return the 5th percentile.
 
     Parameters
     ----------
