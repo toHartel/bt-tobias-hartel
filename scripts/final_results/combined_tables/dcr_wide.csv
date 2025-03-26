@@ -1,9 +1,0 @@
-,DCR 5th Percentile,DCR 5th Percentile,DCR 5th Percentile,DCR 5th Percentile,DCR 5th Percentile,DCR 5th Percentile,DCR 5th Percentile (within Real),DCR 5th Percentile (within Real),DCR 5th Percentile (within Real),DCR 5th Percentile (within Real),DCR 5th Percentile (within Real),DCR 5th Percentile (within Real),DCR 5th Percentile (within Synthetic),DCR 5th Percentile (within Synthetic),DCR 5th Percentile (within Synthetic),DCR 5th Percentile (within Synthetic),DCR 5th Percentile (within Synthetic),DCR 5th Percentile (within Synthetic)
-Model,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae,copula_gan,ctgan,ds,gaussian_copula,synthpop,tvae
-Dataset,,,,,,,,,,,,,,,,,,
-1,12.016,12.457,12.153,8.449,6.22,7.507,5.568,5.568,5.568,5.568,5.568,5.568,11.563,8.832,11.314,7.937,6.481,5.385
-2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-3,10.583,12.599,47.448,10.515,6.022,7.246,6.009,6.009,6.009,6.009,6.009,6.009,12.87,10.389,28.485,11.069,5.847,6.156
-4,6.164,6.325,10.536,13.038,2.449,5.831,2.236,2.236,2.236,2.236,2.236,2.236,5.477,6.325,9.798,12.166,2.449,5.0
-5,3.317,3.606,5.099,3.317,2.828,3.57,3.0,3.0,3.0,3.0,3.0,3.0,3.162,3.464,3.427,3.317,3.0,0.0
-Average,6.416,6.997,15.047,7.064,3.504,4.831,3.363,3.363,3.363,3.363,3.363,3.363,6.614,5.802,10.605,6.898,3.555,3.308

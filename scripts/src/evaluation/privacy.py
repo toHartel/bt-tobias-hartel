@@ -111,13 +111,15 @@ def nndr(df_original, df_synth, within=False):
     # Return the mean NNDR value
     return round(np.percentile(nndr_values, 5), 3)
 
-def mia(df_train, df_synth, model_name, dataset_name, save_plts=False):
+def mia(df_original, df_train, df_synth, model_name, dataset_name, save_plts=False):
     """Perform membership inference attack and return the precision and accuracy values for different parameters.
 
     Parameters
     ----------
+    df_orignal : pandas.DataFrame
+        Dataframe of the original data
     df_train : pandas.DataFrame
-        Dataframe of the train data
+        Dataframe of the training data
     df_synth : pandas.DataFrame
        Dataframe of the synthetic data
     model_name : str
@@ -147,7 +149,7 @@ def mia(df_train, df_synth, model_name, dataset_name, save_plts=False):
         accuracy_values[th] = []
 
         for prop in proportions:
-            attacker_data = df_train.sample(frac=prop, random_state=42)
+            attacker_data = df_original.sample(frac=prop, random_state=42)
             precision_val, accuracy_val = evaluate_membership_attack(attacker_data, train_data_indices, df_synth, th)
 
             precision_values[th].append(round(precision_val, 2))
