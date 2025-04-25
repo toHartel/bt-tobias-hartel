@@ -1,17 +1,11 @@
 # Synthetic Data Generation for Learning Analytics
 Bachelor thesis project of Tobias Hartel
-
 - Supervisor: Dr. Jakub Kuzilek
 - Reviewer 1: Prof. Dr. Niels Pinkwart
 - Reviewer 2: Prof. Dr. Gergana Vladova
 
-Link to thesis proposal: [Proposal](https://www.overleaf.com/project/66ba05a898223c08af9bee3f)
-
-Link to thesis:
-[Bachelor thesis](https://latex.hu-berlin.de/project/6798c98d1a4191d5c3c6b51a)
-
 ## Project Overview
-> In this thesis project six different synthetic data generation (SDG) methods are evaluated using the three-dimensional evaluation approach proposed by Liu et al. [1], that encompasses resemblance, utility and privacy assessment.
+In this thesis project six different synthetic data generation (SDG) methods are evaluated using the three-dimensional evaluation approach proposed by Liu et al. [1], that encompasses resemblance, utility and privacy assessment.
 
 The selected methods include [Synthpop non-parametric](https://synthpop.org.uk/index.html) [2], [DataSynthesizer](https://pypi.org/project/DataSynthesizer/) [3] and four methods from the [Synthetic Data Vault](https://sdv.dev/) (SDV) [4], namely GaussianCopula, CopulaGAN, TVAE and CTGAN. To assess the SDG methods the evaluation is conducted using five different sized educational datasets. For more information on the specific datasets see the _original\_data_ folder. For each dataset a distinct jupyter notebook is created to carry out the evaluation and the results are accumulated one by one. 
 

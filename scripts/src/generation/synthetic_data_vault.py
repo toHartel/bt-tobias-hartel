@@ -32,18 +32,20 @@ def sdv_generate_data(
     None
 
     """
-
+    # Load dataset
     data = pd.read_csv(data_path)
 
+    # Detect metadata
     metadata = SingleTableMetadata()
     metadata.detect_from_dataframe(data)
 
+    # Initialize the synthesizers
     copula_gan = CopulaGANSynthesizer(metadata)
     ctgan = CTGANSynthesizer(metadata)
     tvae = TVAESynthesizer(metadata, enforce_min_max_values=True)
     gaussian_copula = GaussianCopulaSynthesizer(metadata)
     
-    # Fit und Sample für copula_gan
+    # Fit and sample copula_gan
     start_time = time.time()
     print("Fitting copula_gan...\n")
     copula_gan.fit(data)
@@ -53,7 +55,7 @@ def sdv_generate_data(
     copula_gan_samples.to_csv(f'../data/synthetic_data/{dataset_name}/copula_gan.csv', sep = ",", index = False)
 
 
-    # Fit und Sample für ctgan
+    # Fit and sample ctgan
     start_time = time.time()
     print("Fitting ctgan...\n")
     ctgan.fit(data)
@@ -63,7 +65,7 @@ def sdv_generate_data(
     ctgan_samples.to_csv(f'../data/synthetic_data/{dataset_name}/ctgan.csv', sep = ",", index = False)
 
 
-    # Fit und Sample für tvae
+    # Fit and sample tvae
     start_time = time.time()
     print("Fitting tvae...\n")
     tvae.fit(data)
@@ -73,7 +75,7 @@ def sdv_generate_data(
     tvae_samples.to_csv(f'../data/synthetic_data/{dataset_name}/tvae.csv', sep = ",", index = False)
 
 
-    # Fit und Sample für gaussian_copula
+    # Fit and sample gaussian_copula
     start_time = time.time()
     print("Fitting gaussian_copula...\n")
     gaussian_copula.fit(data)
