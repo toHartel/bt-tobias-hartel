@@ -1,8 +1,8 @@
 # Synthetic Data Generation for Learning Analytics
-> Bachelor thesis project of Tobias Hartel
-> - Supervisor: Dr. Jakub Kuzilek
-> - Reviewer 1: Prof. Dr. Niels Pinkwart
-> - Reviewer 2: Prof. Dr. Gergana Vladova
+Bachelor thesis project of Tobias Hartel
+- Supervisor: Dr. Jakub Kuzilek
+- Reviewer 1: Prof. Dr. Niels Pinkwart
+- Reviewer 2: Prof. Dr. Gergana Vladova
 
 ## Project Overview
 In this thesis project six different synthetic data generation (SDG) methods are evaluated using the three-dimensional evaluation approach proposed by Liu et al. [1], that encompasses resemblance, utility and privacy assessment.
