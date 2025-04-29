@@ -10,7 +10,12 @@ In this thesis project six different synthetic data generation (SDG) methods are
 The selected methods include [Synthpop non-parametric](https://synthpop.org.uk/index.html) [2], [DataSynthesizer](https://pypi.org/project/DataSynthesizer/) [3] and four methods from the [Synthetic Data Vault](https://sdv.dev/) (SDV) [4], namely GaussianCopula, CopulaGAN, TVAE and CTGAN. To assess the SDG methods the evaluation is conducted using five differently sized educational datasets. For more information on the specific datasets see the [_original\_data_](https://gitlab.informatik.hu-berlin.de/cses_students/bt-tobias-hartel/-/tree/main/scripts/data/original_data?ref_type=heads) folder. For each dataset a distinct jupyter notebook is created to carry out the evaluation and the results are accumulated one by one. 
 
 ## Usage
-To carry out the evaluation from scratch, the existing generated datasets and result CSV files need to be deleted.
+
+> To carry out the generation and evaluation from scratch, the existing generated datasets and result CSV files need to be **deleted**, i.e.:
+- in scripts/data/original_data inside the directory for the respective dataset _test_data.csv_ and _train_data.csv_
+- in scripts/synthetic_data inside the directory for the respective dataset all six synthetic datasets (e.g. _ctgan.csv_)
+- in scripts/results/plots for both dcr and mia **all plots** for the respective dataset
+- in scripts/results/tables inside the CSV file for each evaluation metric the **six entries** where the entries in column _datasets_ is the number of the respective dataset (e.g. 1 for _1_university_of_jordan_) 
 
 ## Repository Structure
 
@@ -48,18 +53,18 @@ contains the original datasets, synthetic datasets, the evaluation notebooks and
         - **generation/**
 
 ## References
-[1] Qinyi Liu, Mohammad Khalil, Ronas Shakya, and Jelena Jovanovic. 2024.
+> [1] Qinyi Liu, Mohammad Khalil, Ronas Shakya, and Jelena Jovanovic. 2024.
 Scaling While Privacy Preserving: A Comprehensive Synthetic Tabular
 Data Generation and Evaluation in Learning Analytics. In The 14th Learning
 Analytics and Knowledge Conference (LAK ’24), March 18–22, 2024, Kyoto,
 Japan. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3636555.
 3636921
 
-[2] Nowok, B., G.M. Raab & C. Dibben (2016), synthpop: Bespoke creation of synthetic data in R. Journal of Statistical Software, 74:1-26; DOI:10.18637/jss.v074.i11. Available at: https://www.jstatsoft.org/article/view/v074i11
+> [2] Nowok, B., G.M. Raab & C. Dibben (2016), synthpop: Bespoke creation of synthetic data in R. Journal of Statistical Software, 74:1-26; DOI:10.18637/jss.v074.i11. Available at: https://www.jstatsoft.org/article/view/v074i11
 
-[3] Haoyue Ping, Julia Stoyanovich, and Bill Howe. 2017. DataSynthesizer:
+> [3] Haoyue Ping, Julia Stoyanovich, and Bill Howe. 2017. DataSynthesizer:
 Privacy-Preserving Synthetic Datasets. In Proceedings of SSDBM ’17, Chicago,
 IL, USA, June 27-29, 2017, 5 pages.
 DOI: http://dx.doi.org/10.1145/3085504.3091117
 
-[4] N. Patki, R. Wedge and K. Veeramachaneni, "The Synthetic Data Vault," 2016 IEEE International Conference on Data Science and Advanced Analytics (DSAA), Montreal, QC, Canada, 2016, pp. 399-410, doi: 10.1109/DSAA.2016.49.
+> [4] N. Patki, R. Wedge and K. Veeramachaneni, "The Synthetic Data Vault," 2016 IEEE International Conference on Data Science and Advanced Analytics (DSAA), Montreal, QC, Canada, 2016, pp. 399-410, doi: 10.1109/DSAA.2016.49.
