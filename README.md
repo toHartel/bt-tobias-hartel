@@ -1,21 +1,21 @@
-# Synthetic Data Generation for Learning Analytics
+# **Synthetic Data Generation for Learning Analytics**
 Bachelor thesis project of Tobias Hartel
 - Supervisor: Dr. Jakub Kuzilek
 - Reviewer 1: Prof. Dr. Niels Pinkwart
 - Reviewer 2: Prof. Dr. Gergana Vladova
 
 ## Project Overview
-In this thesis project six different synthetic data generation (SDG) methods are evaluated using the three-dimensional evaluation approach proposed by Liu et al. [1], that encompasses resemblance, utility and privacy assessment.
+> In this thesis project six different synthetic data generation (SDG) methods are evaluated using the three-dimensional evaluation approach proposed by Liu et al. [1], that encompasses resemblance, utility and privacy assessment.
 
 The selected SDG methods include [Synthpop non-parametric](https://synthpop.org.uk/index.html) [2], [DataSynthesizer](https://pypi.org/project/DataSynthesizer/) [3] and four methods from the [Synthetic Data Vault](https://sdv.dev/) (SDV) [4], namely GaussianCopula, CopulaGAN, TVAE and CTGAN. To assess the SDG methods the evaluation is conducted using five differently sized educational datasets. For more information on the specific datasets see the [_original\_data_](https://gitlab.informatik.hu-berlin.de/cses_students/bt-tobias-hartel/-/tree/main/scripts/data/original_data?ref_type=heads) folder. For each dataset a distinct jupyter notebook is created to carry out the evaluation and the results are accumulated one by one. 
 
 ## Usage
 
-To carry out the generation and evaluation from scratch, the existing generated datasets and result CSV files need to be **deleted**, i.e.:
+To carry out the generation and evaluation from scratch for one dataset, the existing generated datasets and result CSV files need to be **deleted**, i.e.:
 - in scripts/data/original_data inside the directory for the respective dataset _test_data.csv_ and _train_data.csv_
 - in scripts/synthetic_data inside the directory for the respective dataset all six synthetic datasets (e.g. _ctgan.csv_)
 - in scripts/results/plots for both dcr and mia **all plots** for the respective dataset
-- in scripts/results/tables inside the CSV file for each evaluation metric the **six entries** where the entries in column _datasets_ is the number of the respective dataset (e.g. 1 for _1_university_of_jordan_) 
+- in scripts/results/tables inside the CSV file for each evaluation metric the **six entries** where column _Dataset_ is the ID of the respective dataset (e.g. 1 for _1_university_of_jordan_) 
 
 If the evaluation is done for all five datasets, the results may be merged using the _merge_results_ notebook, to obtain clear results as dataframe and latex table and save it as CSV file inside _final_results_.
 
