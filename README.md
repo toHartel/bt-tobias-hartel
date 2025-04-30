@@ -12,14 +12,14 @@ The selected SDG methods include [Synthpop non-parametric](https://synthpop.org.
 ## Usage
 
 To carry out the generation and evaluation from scratch for one dataset, the existing generated datasets and result CSV files need to be **deleted** first, i.e.:
-- in scripts/data/original_data inside the directory for the respective dataset _test_data.csv_ and _train_data.csv_
-- in scripts/synthetic_data inside the directory for the respective dataset all six synthetic datasets (e.g. _ctgan.csv_)
-- in scripts/results/plots for both dcr and mia **all plots** for the respective dataset
-- in scripts/results/tables inside the CSV file for each evaluation metric the **six entries** where column _Dataset_ is the ID of the respective dataset (e.g. 1 for _1_university_of_jordan_) 
+- in `scripts/data/original_data` inside the directory for the respective dataset `test_data.csv` and `train_data.csv`
+- in `scripts/synthetic_data` inside the directory for the respective dataset all six synthetic datasets (e.g. `ctgan.csv`)
+- in `scripts/results/plots` for both dcr and mia **all plots** for the respective dataset
+- in `scripts/results/tables` inside the CSV file for each evaluation metric the **six entries** where column _Dataset_ is the ID of the respective dataset (e.g. 1 for `1_university_of_jordan`)
 
 Then the respective notebook can be run.
 
-If the evaluation is done for all five datasets, the results may be merged using the _merge_results_ notebook, to obtain clear results as dataframe and latex table and save it as CSV file inside _final_results_.
+If the evaluation is done for all five datasets, the results may be merged using the `merge_results` notebook, to obtain clear results as dataframe and latex table and save it as CSV file inside `final_results`.
 
 ## Repository Structure
 
