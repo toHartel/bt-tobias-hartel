@@ -11,11 +11,11 @@ The selected SDG methods include [Synthpop non-parametric](https://synthpop.org.
 
 ## Usage
 
-To carry out the generation and evaluation from scratch for one dataset, the existing generated datasets and result CSV files need to be **deleted** first, i.e.:
+To carry out the generation and evaluation from scratch for one dataset, the existing generated datasets and results need to be **deleted** first. This includes the following files and entries:
 - in `scripts/data/original_data` inside the directory for the respective dataset `test_data.csv` and `train_data.csv`
-- in `scripts/synthetic_data` inside the directory for the respective dataset all six synthetic datasets (e.g. `ctgan.csv`)
+- in `scripts/synthetic_data` inside the directory for the respective dataset **all six synthetic datasets** (e.g. `ctgan.csv`)
 - in `scripts/results/plots` for both dcr and mia **all plots** for the respective dataset
-- in `scripts/results/tables` inside the CSV file for each evaluation metric the **six entries** where column _Dataset_ is the ID of the respective dataset (e.g. 1 for `1_university_of_jordan`)
+- in `scripts/results/tables` inside the CSV file for each evaluation metric the **six entries** of the respective dataset (e.g. for dataset `1_university_of_jordan` all entries where _Dataset_ is 1)
 
 Then the respective notebook can be run.
 
