@@ -5,7 +5,7 @@ Bachelor thesis project of Tobias Hartel
 - Reviewer 2: Prof. Dr. Gergana Vladova
 
 ## Project Overview
-> In this thesis project six different synthetic data generation (SDG) methods are evaluated using the three-dimensional evaluation approach proposed by Liu et al. [1], that encompasses resemblance, utility and privacy assessment.
+In this thesis project six different synthetic data generation (SDG) methods are evaluated using the three-dimensional evaluation approach proposed by Liu et al. [1], that encompasses resemblance, utility and privacy assessment.
 
 The selected SDG methods include [Synthpop non-parametric](https://synthpop.org.uk/index.html) [2], [DataSynthesizer](https://pypi.org/project/DataSynthesizer/) [3] and four methods from the [Synthetic Data Vault](https://sdv.dev/) (SDV) [4], namely GaussianCopula, CopulaGAN, TVAE and CTGAN. To assess the SDG methods the evaluation is conducted using five differently sized educational datasets. For more information on the specific datasets see the [_original\_data_](https://gitlab.informatik.hu-berlin.de/cses_students/bt-tobias-hartel/-/tree/main/scripts/data/original_data?ref_type=heads) folder. For each dataset a distinct jupyter notebook is created to carry out the evaluation and the results are accumulated one by one. 
 
