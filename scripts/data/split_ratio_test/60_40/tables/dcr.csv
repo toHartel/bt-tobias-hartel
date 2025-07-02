@@ -1,0 +1,7 @@
+Dataset,Model,DCR 5th Percentile,DCR 5th Percentile (within Real),DCR 5th Percentile (within Synthetic)
+1,synthpop,5.477,5.568,2.0
+1,ds,12.166,5.568,6.083
+1,tvae,7.416,5.568,3.317
+1,gaussian_copula,8.832,5.568,4.899
+1,copula_gan,10.247,5.568,5.292
+1,ctgan,11.489,5.568,5.477

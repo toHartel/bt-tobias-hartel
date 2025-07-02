@@ -1,0 +1,7 @@
+Dataset,Model,Accuracy Difference,F1 Score Difference,ROC AUC Difference
+1,synthpop,0.05,0.04,-0.01
+1,ds,0.4,0.4,0.43
+1,tvae,0.11,0.13,0.06
+1,gaussian_copula,0.13,0.12,0.04
+1,copula_gan,0.27,0.31,0.23
+1,ctgan,0.29,0.31,0.44

@@ -1,0 +1,7 @@
+Dataset,Model,NNDR 5th percentile,NNDR 5th percentile (within Real),NNDR 5th percentile (within Synthetic)
+1,synthpop,0.474,0.459,0.374
+1,ds,0.614,0.459,0.568
+1,tvae,0.594,0.459,0.568
+1,gaussian_copula,0.575,0.459,0.629
+1,copula_gan,0.576,0.459,0.608
+1,ctgan,0.61,0.459,0.615
