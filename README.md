@@ -40,6 +40,11 @@ contains the original datasets, synthetic datasets, the evaluation notebooks and
                 - dcr/
                 - mia/
             - **tables/**
+        - **split_ratio_test/:** contains results on dataset 1 testing different split ratios
+            - 60_40/
+            - 70_30/
+            - 80_20/
+            - 90_10/
         - **synthetic_data/:** contains the generated synthetic data
             - 1_university_of_jordan/
             - 2_fictional_students_perfomance/
