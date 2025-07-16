@@ -46,7 +46,6 @@ def jsd(df_original, df_synthetic):
     float
         Returns the average Jensen-Shannon divergence.
     """
-    # JSD for categorical data ?
     # calculate Jensen-Shannon divergence for each column
     results = {}
     for col in df_original.columns:
@@ -63,9 +62,8 @@ def jsd(df_original, df_synthetic):
         # Calculate Jensen-Shannon distance
         js_distance = jensenshannon(freq_original, freq_synth)
         results[col] = js_distance ** 2 # square the JS distance to get the Jensen-Shannon divergence
-        #print(f"JSD for column {col}: {results[col]}")
 
-    # Return average JSD
+    # Return mean JSD
     return np.mean(list(results.values()))
 
 
