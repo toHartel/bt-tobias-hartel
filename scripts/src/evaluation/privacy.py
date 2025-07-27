@@ -50,9 +50,9 @@ def dcr(df_original, df_synth, model_name, dataset_name, within=False, save_hist
         bins = np.arange(0, 50, 1)
         dcr_values_clipped = np.clip(dcr_values, bins[0], bins[-1])
         plt.hist(dcr_values_clipped.flatten(), bins=bins, alpha=0.8)
-        plt.xlabel('Distance')
-        plt.ylabel('Frequency')
-        plt.title(f'DCR values - {model_name}')
+        plt.xlabel('Distance', fontsize=14, fontweight='bold')
+        plt.ylabel('Frequency', fontsize=14, fontweight='bold')
+        plt.title(f'DCR values - {model_name}', fontsize=16, fontweight='bold')
         plt.savefig(f'../data/results/plots/dcr/{dataset_name}/{model_name}_dcr_hist.png')
 
         # Clear the plot
@@ -161,9 +161,12 @@ def mia(df_original, df_train, df_synth, model_name, dataset_name, save_plts=Fal
         plt.figure(figsize=(8, 6))
         for i, th in enumerate(thresholds):
             plt.plot(proportions, precision_values[th], label=f'Threshold: {th}', marker=markers[i])
-        plt.xlabel('Proportions')
-        plt.ylabel('Precision')
-        plt.title(f'{model_name}: Precision')
+        plt.xlabel('Proportions', fontsize=14, fontweight='bold')
+        plt.ylabel('Precision', fontsize=14, fontweight='bold')
+        plt.xticks(fontsize=12, fontweight='bold')
+        plt.yticks(fontsize=12, fontweight='bold')
+        plt.ylim(0, 1)
+        plt.title(f'MIA on {model_name}: Precision', fontsize=16, fontweight='bold')
         plt.legend()
         plt.savefig(f'../data/results/plots/mia/{dataset_name}/{model_name}_mia_precision.png')
 
@@ -171,9 +174,12 @@ def mia(df_original, df_train, df_synth, model_name, dataset_name, save_plts=Fal
         plt.figure(figsize=(8, 6))
         for i, th in enumerate(thresholds):
             plt.plot(proportions, accuracy_values[th], label=f'Threshold: {th}', marker=markers[i])
-        plt.xlabel('Proportions')
-        plt.ylabel('Accuracy')
-        plt.title(f'{model_name}: Accuracy')
+        plt.xlabel('Proportions', fontsize=14, fontweight='bold')
+        plt.ylabel('Accuracy', fontsize=14, fontweight='bold')
+        plt.xticks(fontsize=12, fontweight='bold')
+        plt.yticks(fontsize=12, fontweight='bold')
+        plt.ylim(0, 1)
+        plt.title(f'MIA on {model_name}: Accuracy', fontsize=16, fontweight='bold')
         plt.legend()
         plt.savefig(f'../data/results/plots/mia/{dataset_name}/{model_name}_mia_accuracy.png')
     
