@@ -56,6 +56,7 @@ contains the original datasets, synthetic datasets, the evaluation notebooks and
         - **plots/**
             - **dcr/** 
             - **mia/**
+            - **utility/**
     - **notebooks/:** contains the jupyter notebooks for each dataset and one notebook for merging the final results
     - **src/:** contains python scripts for evaluation and SDG
         - **evaluation/**
